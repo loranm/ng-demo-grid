@@ -1,0 +1,23 @@
+<article
+  class="testimonial flow"
+  [ngClass]="className"
+  [class.quote]="testimonial.withDecoration"
+>
+  <div class="flex">
+    <div>
+      <img
+        class="testimonial__image"
+        [src]="testimonial.imgSrc"
+        [attr.alt]="testimonial.altText"
+      />
+    </div>
+    <div>
+      <h2 class="testimonial__name">{{ testimonial.name }}</h2>
+      <p class="testimonial__position">{{ testimonial.position }}</p>
+    </div>
+  </div>
+  <p class="testimonial__excerpt">
+    {{ testimonial.excerpt }}
+  </p>
+  <q class="testimonial__quote">{{ testimonial.quote }}</q>
+</article>

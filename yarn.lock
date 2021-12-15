@@ -128,6 +128,15 @@
   dependencies:
     tslib "^2.1.0"
 
+"@angular/cdk@12.2.13":
+  version "12.2.13"
+  resolved "https://npm.wizbii.us/@angular%2fcdk/-/cdk-12.2.13.tgz#1fdbe814adfd6b4ff906c6d9c4c6df07b83f09d8"
+  integrity sha512-zSKRhECyFqhingIeyRInIyTvYErt4gWo+x5DQr0b7YLUbU8DZSwWnG4w76Ke2s4U8T7ry1jpJBHoX/e8YBpGMg==
+  dependencies:
+    tslib "^2.2.0"
+  optionalDependencies:
+    parse5 "^5.0.0"
+
 "@angular/cli@~12.0.3":
   version "12.0.5"
   resolved "https://npm.wizbii.us/@angular%2fcli/-/cli-12.0.5.tgz#0b1c77fd1516743f2609ebe8036d3da7379607b2"
@@ -201,6 +210,13 @@
   integrity sha512-Ew/fGPTsywoYnm6DFPA/DyLl4Sb+1/uzpledrbxUHzaSKIrnXFrjQiUTmsbbq+8qono3JzbUIblqH1DrNThYiA==
   dependencies:
     tslib "^2.1.0"
+
+"@angular/material@12.2.13":
+  version "12.2.13"
+  resolved "https://npm.wizbii.us/@angular%2fmaterial/-/material-12.2.13.tgz#7f92f95002a2abaa8bb115ca8f0809bdc3f7d3fc"
+  integrity sha512-6g2GyN4qp2D+DqY2AwrQuPB3cd9gybvQVXvNRbTPXEulHr+LgGei00ySdFHFp6RvdGSMZ4i3LM1Fq3VkFxhCfQ==
+  dependencies:
+    tslib "^2.2.0"
 
 "@angular/platform-browser-dynamic@~12.0.3":
   version "12.0.5"
@@ -5489,6 +5505,11 @@ parse5-sax-parser@^6.0.1:
   dependencies:
     parse5 "^6.0.1"
 
+parse5@^5.0.0:
+  version "5.1.1"
+  resolved "https://npm.wizbii.us/parse5/-/parse5-5.1.1.tgz#f68e4e5ba1852ac2cadc00f4555fff6c2abb6178"
+  integrity sha512-ugq4DFI0Ptb+WWjAdOK16+u/nHfiIrcE+sh8kZMaM0WllQKLI9rOUq6c2b7cwPkXdzfQESqvoqK6ug7U/Yyzug==
+
 parse5@^6.0.1:
   version "6.0.1"
   resolved "https://npm.wizbii.us/parse5/-/parse5-6.0.1.tgz#e1a1c085c569b3dc08321184f19a39cc27f7c30b"
@@ -7415,7 +7436,7 @@ tslib@^1.10.0, tslib@^1.9.0:
   resolved "https://npm.wizbii.us/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
-tslib@^2.0.0, tslib@^2.1.0:
+tslib@^2.0.0, tslib@^2.1.0, tslib@^2.2.0:
   version "2.3.1"
   resolved "https://npm.wizbii.us/tslib/-/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
   integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==

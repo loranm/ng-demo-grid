@@ -1,0 +1,32 @@
+.testimonial {
+  font-size: var(--fs-400);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 2.5rem 3.75rem 3rem -3rem var(--clr-secondary-400);
+
+  &__name {
+    font-size: var(--fs-400);
+    font-weight: var(--fw-400);
+    line-height: 1;
+  }
+
+  &__position {
+    font-size: var(--fs-300);
+    opacity: 0.5;
+  }
+
+  &__image {
+    width: 1.75rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
+
+  &__excerpt {
+    font-size: var(--fs-500);
+    line-height: 1.2;
+  }
+
+  &__quote {
+    opacity: 0.7;
+  }
+}

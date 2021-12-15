@@ -1,0 +1,50 @@
+/* utilities */
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-spacer, 1em);
+}
+
+.bg-primary-400 {
+  color: var(--clr-neutral-100);
+  background: var(--clr-primary-400);
+}
+
+.bg-secondary-400 {
+  background: var(--clr-secondary-400);
+  color: var(--clr-neutral-100);
+}
+
+.bg-secondary-500 {
+  background: var(--clr-secondary-500);
+  color: var(--clr-neutral-100);
+}
+
+.bg-neutral-100 {
+  background: var(--clr-neutral-100);
+  color: var(--clr-secondary-400);
+}
+
+.border-primary-400 {
+  border: 2px solid var(--clr-primary-400);
+}
+
+.quote {
+  background-image: url("/assets/images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
