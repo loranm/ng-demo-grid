@@ -1,7 +1,3 @@
 <section class="testimonial-grid">
-  <app-card
-    *ngFor="let testimonial of TESTIMONIALS; let index = index"
-    [testimonial]="testimonial"
-    [className]="classArray[index]"
-  ></app-card>
+  <router-outlet></router-outlet>
 </section>

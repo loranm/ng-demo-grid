@@ -1,6 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { CardBackgroundColors } from 'src/app/models/card-classees';
-import { TESTIMONIALS } from 'src/app/shared/data/testimonials';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -8,13 +6,4 @@ import { TESTIMONIALS } from 'src/app/shared/data/testimonials';
   styleUrls: ['./home.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeComponent {
-  TESTIMONIALS = TESTIMONIALS;
-  classArray: CardBackgroundColors[] = [
-    CardBackgroundColors.Primary400,
-    CardBackgroundColors.Secondary400,
-    CardBackgroundColors.Neutral100,
-    CardBackgroundColors.Secondary500,
-    CardBackgroundColors.Neutral100,
-  ];
-}
+export class HomeComponent {}
