@@ -1,5 +1,7 @@
-.testimonial-grid {
-  padding-block: 2rem;
-  width: min(95%, 70rem);
-  margin-inline: auto;
+.home {
+  &__testimonial-grid {
+    padding-block: 2rem;
+    width: min(95%, 70rem);
+    margin-inline: auto;
+  }
 }
