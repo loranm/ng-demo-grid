@@ -1,5 +1,19 @@
-<app-card
-  *ngFor="let testimonial of TESTIMONIALS; let index = index"
-  [testimonial]="testimonial"
-  [className]="classArray[index]"
-></app-card>
+<section role="region" class="testimonials">
+  <ul class="testimonials__list">
+    <li *ngFor="let testimonial of TESTIMONIALS; let index = index">
+      <app-card
+        [testimonial]="testimonial"
+        [className]="classArray[index]"
+      ></app-card>
+    </li>
+  </ul>
+</section>
+
+<hr />
+
+<h2>Code</h2>
+<mat-tab-group animationDuration="300ms">
+  <mat-tab *ngFor="let snippet of snippets" [label]="snippet.label">
+    <pre [highlight]="snippet.code"></pre>
+  </mat-tab>
+</mat-tab-group>

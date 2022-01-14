@@ -3,7 +3,7 @@
   [ngClass]="className"
   [class.quote]="testimonial.withDecoration"
 >
-  <div class="flex">
+  <header role="banner" class="flex">
     <div>
       <img
         class="testimonial__image"
@@ -15,7 +15,7 @@
       <h2 class="testimonial__name">{{ testimonial.name }}</h2>
       <p class="testimonial__position">{{ testimonial.position }}</p>
     </div>
-  </div>
+  </header>
   <p class="testimonial__excerpt">
     {{ testimonial.excerpt }}
   </p>

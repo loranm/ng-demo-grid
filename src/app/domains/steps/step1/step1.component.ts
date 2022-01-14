@@ -1,8 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { Component, ChangeDetectionStrategy, NgModule } from '@angular/core';
-import { CardModule } from 'src/app/commons/card/card.component';
-import { CardBackgroundColors } from 'src/app/models/card-classees';
-import { TESTIMONIALS } from 'src/app/shared/data/testimonials';
+import { CardModule } from '@commons/card/card.component';
+import {
+  CARDBACKGROUNDCOLORS,
+  CardBackgroundColors,
+} from '@models/card-classes';
+import { Snippet } from '@models/snippet';
+import { Testimonial } from '@models/testimonial';
+import { TESTIMONIALS } from '@shared/data/testimonials';
+import { SharedModule } from '@shared/shared.module';
+import { SNIPPETS } from './step1-snippets';
 
 @Component({
   selector: 'app-step1',
@@ -11,18 +18,19 @@ import { TESTIMONIALS } from 'src/app/shared/data/testimonials';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Step1Component {
-  TESTIMONIALS = TESTIMONIALS;
-  classArray: CardBackgroundColors[] = [
-    CardBackgroundColors.Primary400,
-    CardBackgroundColors.Secondary400,
-    CardBackgroundColors.Neutral100,
-    CardBackgroundColors.Secondary500,
-    CardBackgroundColors.Neutral100,
-  ];
+  TESTIMONIALS!: readonly Testimonial[];
+  classArray!: readonly CardBackgroundColors[];
+  snippets!: readonly Snippet[];
+
+  constructor() {
+    this.TESTIMONIALS = TESTIMONIALS;
+    this.classArray = CARDBACKGROUNDCOLORS;
+    this.snippets = SNIPPETS;
+  }
 }
 
 @NgModule({
-  imports: [CommonModule, CardModule],
+  imports: [CommonModule, CardModule, SharedModule],
   declarations: [Step1Component],
   exports: [Step1Component],
 })

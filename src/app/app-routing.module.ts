@@ -5,8 +5,8 @@ import { FeaturesRoutingEnum } from './features-routing.enum';
 const routes: Routes = [
   {
     path: FeaturesRoutingEnum.Home,
-    loadChildren: () =>
-      import('./features/home/home.module').then((module) => module.HomeModule),
+    loadChildren: async () =>
+      (await import('./features/home/home.module')).HomeModule,
   },
   { path: '', redirectTo: FeaturesRoutingEnum.Home, pathMatch: 'full' },
 ];
