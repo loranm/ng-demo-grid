@@ -1,13 +1,13 @@
 <mat-toolbar class="navbar">
-  <button
+  <a
     mat-icon-button
     color="primary"
-    aria-label="Example icon-button with a heart icon"
+    aria-label="Allez sur la page précédente"
     class="navbar__previous"
-    [routerLink]="nextPageRoute"
+    [routerLink]="previousPageRoute"
   >
-    <mat-icon>navigate_before</mat-icon>
-  </button>
+    <mat-icon aria-hidden="true">navigate_before</mat-icon>
+  </a>
   <a
     mat-icon-button
     color="accent"
@@ -16,6 +16,6 @@
     [routerLink]="nextPageRoute"
     routerLinkActive="router-link-active"
   >
-    <mat-icon>navigate_next</mat-icon>
+    <mat-icon aria-hidden="true">navigate_next</mat-icon>
   </a>
 </mat-toolbar>

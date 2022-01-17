@@ -1,7 +1,15 @@
-import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, ChangeDetectionStrategy, OnDestroy } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 import { HomeRoutingEnum } from '../home-routing.enum';
-import { map } from 'rxjs/operators';
+import { filter, map, takeUntil } from 'rxjs/operators';
+import {
+  BehaviorSubject,
+  combineLatest,
+  of,
+  SubscribableOrPromise,
+  Subscription,
+} from 'rxjs';
+import { STEPS } from './steps';
 
 @Component({
   selector: 'app-home',
@@ -9,22 +17,49 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./home.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeComponent implements OnInit {
-  navigationOrder: HomeRoutingEnum[];
+export class HomeComponent implements OnDestroy {
+  sub: Subscription;
+  currentRoute$ = new BehaviorSubject<any>(undefined);
+  readonly steps = STEPS;
 
-  ngOnInit(): void {
-    console.log(this.route.pathFromRoot);
+  nextRoute$ = this.currentRoute$.pipe(
+    map((currentRoute) => this.steps[this.getNextIndex(currentRoute)])
+  );
+
+  previousRoute$ = this.currentRoute$.pipe(
+    map((currentRoute) => this.steps[this.getPreviousIndex(currentRoute)])
+  );
+
+  constructor(private readonly router: Router) {
+    this.sub = this.router.events
+      .pipe(
+        filter(
+          (event): event is NavigationEnd => event instanceof NavigationEnd
+        )
+      )
+      .subscribe({
+        next: (event) => {
+          this.currentRoute$.next(this.parseRoute(event));
+        },
+      });
   }
 
-  nextPage() {
-    console.log('navigate to next page');
+  private parseRoute(event: NavigationEnd): any {
+    return this.router.parseUrl(event.urlAfterRedirects).root.children.primary
+      .segments[1].path;
   }
 
-  previousPage() {
-    console.log('navigate to previous page');
+  private getNextIndex(currentRoute: HomeRoutingEnum) {
+    const index = this.steps.findIndex((step) => step === currentRoute);
+    return index + 1 >= this.steps.length ? 0 : index + 1;
   }
 
-  constructor(private route: ActivatedRoute, private router: Router) {
-    this.navigationOrder = [HomeRoutingEnum.Step1, HomeRoutingEnum.Step2];
+  private getPreviousIndex(currentRoute: HomeRoutingEnum) {
+    const index = this.steps.findIndex((step) => step === currentRoute);
+    return index - 1 <= 0 ? 0 : index - 1;
+  }
+
+  ngOnDestroy(): void {
+    this.sub.unsubscribe();
   }
 }

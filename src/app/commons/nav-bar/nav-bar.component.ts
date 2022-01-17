@@ -3,8 +3,6 @@ import {
   Component,
   ChangeDetectionStrategy,
   NgModule,
-  Output,
-  EventEmitter,
   Input,
 } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -18,8 +16,8 @@ import { SharedModule } from '@shared/shared.module';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavBarComponent {
-  @Input() nextPageRoute!: HomeRoutingEnum;
-  @Input() previousPageRoute!: HomeRoutingEnum;
+  @Input() nextPageRoute!: HomeRoutingEnum | null;
+  @Input() previousPageRoute!: HomeRoutingEnum | null;
 }
 
 @NgModule({
