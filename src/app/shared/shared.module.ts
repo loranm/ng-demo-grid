@@ -3,9 +3,17 @@ import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
-const usedMatModules = [MatButtonModule, MatTabsModule, MatCardModule];
+const usedMatModules = [
+  MatButtonModule,
+  MatTabsModule,
+  MatCardModule,
+  MatToolbarModule,
+  MatIconModule,
+];
 
 @NgModule({
   declarations: [],

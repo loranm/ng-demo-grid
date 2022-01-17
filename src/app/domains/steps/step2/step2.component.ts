@@ -13,11 +13,11 @@ import { SNIPPETS } from './snippets';
 
 @Component({
   selector: 'app-step1',
-  templateUrl: './step1.component.html',
-  styleUrls: ['./step1.component.scss'],
+  templateUrl: './step2.component.html',
+  styleUrls: ['./step2.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Step1Component {
+export class Step2Component {
   TESTIMONIALS!: readonly Testimonial[];
   classArray!: readonly CardBackgroundColors[];
   snippets!: readonly Snippet[];
@@ -31,7 +31,7 @@ export class Step1Component {
 
 @NgModule({
   imports: [CommonModule, CardModule, SharedModule],
-  declarations: [Step1Component],
-  exports: [Step1Component],
+  declarations: [Step2Component],
+  exports: [Step2Component],
 })
-export class Step1Module {}
+export class Step2Module {}

@@ -1,0 +1,12 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  &__previous {
+    grid-column: 1;
+  }
+  &__next {
+    grid-column: 3;
+  }
+}

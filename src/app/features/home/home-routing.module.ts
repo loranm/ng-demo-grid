@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { Step2Component } from '@domains/steps/step2/step2.component';
 import { Step1Component } from 'src/app/domains/steps/step1/step1.component';
 import { HomeRoutingEnum } from './home-routing.enum';
 import { HomeComponent } from './home/home.component';
@@ -12,6 +13,10 @@ const routes: Routes = [
       {
         path: HomeRoutingEnum.Step1,
         component: Step1Component,
+      },
+      {
+        path: HomeRoutingEnum.Step2,
+        component: Step2Component,
       },
       { path: '', redirectTo: HomeRoutingEnum.Step1, pathMatch: 'full' },
     ],
