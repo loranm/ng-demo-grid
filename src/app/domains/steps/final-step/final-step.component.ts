@@ -1,15 +1,15 @@
 import { CommonModule } from '@angular/common';
-import {
-  Component,
-  OnInit,
-  ChangeDetectionStrategy,
-  NgModule,
-} from '@angular/core';
+import { Component, ChangeDetectionStrategy, NgModule } from '@angular/core';
 import { CardModule } from '@commons/card/card.component';
-import { CardBackgroundColors } from '@models/card-classes';
+import {
+  CARDBACKGROUNDCOLORS,
+  CardBackgroundColors,
+} from '@models/card-classes';
 import { Snippet } from '@models/snippet';
 import { Testimonial } from '@models/testimonial';
+import { TESTIMONIALS } from '@shared/data/testimonials';
 import { SharedModule } from '@shared/shared.module';
+import { SNIPPETS } from './snippets';
 
 @Component({
   selector: 'app-final-step',
@@ -21,6 +21,12 @@ export class FinalStepComponent {
   TESTIMONIALS!: readonly Testimonial[];
   classArray!: readonly CardBackgroundColors[];
   snippets!: readonly Snippet[];
+
+  constructor() {
+    this.TESTIMONIALS = TESTIMONIALS;
+    this.classArray = CARDBACKGROUNDCOLORS;
+    this.snippets = SNIPPETS;
+  }
 }
 
 @NgModule({
