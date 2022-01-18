@@ -1,0 +1,114 @@
+@function px-to-em($val) {
+  @return $val / 16px * 1em;
+}
+
+// stylelint-disable unit-disallowed-list
+$sm: px-to-em(480px);
+$sm-max: px-to-em(480px - 1);
+$md: px-to-em(768px);
+$md-max: px-to-em(768px - 1);
+$lg: px-to-em(992px);
+$lg-max: px-to-em(992px - 1);
+$xl: px-to-em(1200px);
+$xl-max: calc(1200px - 0.0625em);
+$xxl: px-to-em(1440px);
+
+$breakpoints: (
+  sm: $sm,
+  md: $md,
+  lg: $lg,
+  xl: $xl,
+  xxl: $xxl,
+);
+$breakpointsMax: (
+  sm-max: $sm-max,
+  md-max: $md-max,
+  lg-max: $lg-max,
+  xl-max: $xl-max,
+);
+
+@mixin minWidth($key) {
+  @media (min-width: map-get($breakpoints, $key)) {
+    @content;
+  }
+}
+
+@mixin maxWidth($key) {
+  @media (max-width: map-get($breakpointsMax, $key)) {
+    @content;
+  }
+}
+
+@mixin minWidthLandscape($key) {
+  @media (min-width: map-get($breakpoints, $key)) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin maxWidthLandscape($key) {
+  @media (max-width: map-get($breakpointsMax, $key)) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin handset() {
+  @media (max-width: 599.98px) and (orientation: portrait),
+    (max-width: 959.98px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin notHandset() {
+  @media (min-width: 600px) and (max-width: 839.98px) and (orientation: portrait),
+    (min-width: 960px) and (max-width: 1279.98px) and (orientation: landscape),
+    (min-width: 840px) and (orientation: portrait),
+    (min-width: 1280px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media (min-width: 600px) and (max-width: 839.98px) and (orientation: portrait),
+    (min-width: 960px) and (max-width: 1279.98px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin tabletPortrait() {
+  @media (min-width: 600px) and (max-width: 839.98px) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin tabletLandscape() {
+  @media (min-width: 960px) and (max-width: 1279.98px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin web() {
+  @media (min-width: 840px) and (orientation: portrait),
+    (min-width: 1280px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin largeTabletPortrait() {
+  @media (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin largeTabletLandscape() {
+  @media only screen and (min-width: 64rem) and (max-width: 85.375rem) and (min-resolution: 2dppx) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin webOrTabletLandscape() {
+  @media (min-width: 960px) and (max-width: 1279.98px) and (orientation: landscape),
+    (min-width: 840px) and (orientation: portrait),
+    (min-width: 1280px) and (orientation: landscape) {
+    @content;
+  }
+}
