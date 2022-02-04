@@ -1,6 +1,8 @@
 <section role="region" class="testimonials">
   <header role="banner">
-    <h1>Premiere étape</h1>
+    <app-separator>
+      <h2>Première étape</h2>
+    </app-separator>
   </header>
   <ul role="list" class="testimonials__list">
     <li *ngFor="let testimonial of TESTIMONIALS; let index = index">
@@ -12,11 +14,14 @@
   </ul>
 </section>
 
-<hr />
+<section role="region" class="code">
+  <app-separator>
+    <h2>Code</h2>
+  </app-separator>
 
-<h2>Code</h2>
-<mat-tab-group animationDuration="300ms">
-  <mat-tab *ngFor="let snippet of snippets" [label]="snippet.label">
-    <pre [highlight]="snippet.code"></pre>
-  </mat-tab>
-</mat-tab-group>
+  <mat-tab-group animationDuration="300ms">
+    <mat-tab *ngFor="let snippet of snippets" [label]="snippet.label">
+      <pre [highlight]="snippet.code"></pre>
+    </mat-tab>
+  </mat-tab-group>
+</section>

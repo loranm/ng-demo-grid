@@ -3,6 +3,7 @@
 @include mat.core();
 
 $typography: mat.define-typography-config(
+  $headline: mat.define-typography-level(24px, 32px, 400),
   $font-family: var(--ff-primary),
 );
 

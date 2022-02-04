@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, ChangeDetectionStrategy, NgModule } from '@angular/core';
 import { CardModule } from '@commons/card/card.component';
+import { SeparatorModule } from '@commons/separator/separator.component';
 import {
   CARDBACKGROUNDCOLORS,
   CardBackgroundColors,
@@ -30,7 +31,7 @@ export class Step1Component {
 }
 
 @NgModule({
-  imports: [CommonModule, CardModule, SharedModule],
+  imports: [CommonModule, CardModule, SharedModule, SeparatorModule],
   declarations: [Step1Component],
   exports: [Step1Component],
 })

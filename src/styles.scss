@@ -8,12 +8,21 @@ html,
 body {
   height: 100%;
 }
+
 body {
-  margin: 0;
+  background-image: url("./assets/images/topography.svg"),
+    linear-gradient(110deg, #f93d66, #6d47d9);
+  background-size: 340px, auto;
+  min-height: calc(100vh - 100px);
+  margin: 50px;
+  background-attachment: fixed;
+  letter-spacing: -1px;
 }
 
 h1,
 h2,
 h3 {
-  font-weight: var(--fw-700);
+  font-weight: var(--fw-500) !important;
+  margin: 0 !important;
+  line-height: 1.5;
 }
