@@ -21,6 +21,7 @@
       "dom"
     ],
     "paths": {
+      "@core/*": ["src/app/core/*"],
       "@commons/*": ["src/app/commons/*"],
       "@webservices/*": ["src/app/webservices/*"],
       "@domains/*": ["src/app/domains/*"],

@@ -5,14 +5,18 @@ import { FeaturesRoutingEnum } from './features-routing.enum';
 const routes: Routes = [
   {
     path: FeaturesRoutingEnum.Home,
-    loadChildren: async () =>
-      (await import('./features/home/home.module')).HomeModule,
+    loadChildren: () =>
+      import('./home/home.module').then((module) => module.HomeModule),
   },
-  { path: '', redirectTo: FeaturesRoutingEnum.Home, pathMatch: 'full' },
+  {
+    path: '',
+    redirectTo: FeaturesRoutingEnum.Home,
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class FeaturesRoutingModule {}

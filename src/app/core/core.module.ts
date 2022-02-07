@@ -1,18 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+import { RouterModule } from '@angular/router';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { CoreComponent } from '@core/components/core/core.component';
+import { FeaturesModule } from '@features/features.module';
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [CoreComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
+    RouterModule.forRoot([], {
+      initialNavigation: 'enabled',
+      onSameUrlNavigation: 'reload',
+      paramsInheritanceStrategy: 'always',
+      scrollPositionRestoration: 'disabled',
+      anchorScrolling: 'enabled',
+      relativeLinkResolution: 'legacy',
+    }),
     HighlightModule,
+    FeaturesModule,
+    BrowserAnimationsModule,
   ],
   providers: [
     {
@@ -28,6 +37,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       },
     },
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [CoreComponent],
 })
-export class AppModule {}
+export class CoreModule {}
