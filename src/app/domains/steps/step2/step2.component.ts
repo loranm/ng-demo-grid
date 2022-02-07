@@ -1,36 +1,25 @@
 import { CommonModule } from '@angular/common';
 import { Component, ChangeDetectionStrategy, NgModule } from '@angular/core';
 import { CardModule } from '@commons/card/card.component';
-import {
-  CARDBACKGROUNDCOLORS,
-  CardBackgroundColors,
-} from '@models/card-classes';
-import { Snippet } from '@models/snippet';
-import { Testimonial } from '@models/testimonial';
+import { StepLayoutModule } from '@commons/step-layout/step-layout.component';
+import { CARDBACKGROUNDCOLORS } from '@models/card-classes';
 import { TESTIMONIALS } from '@shared/data/testimonials';
-import { SharedModule } from '@shared/shared.module';
 import { SNIPPETS } from './snippets';
 
 @Component({
-  selector: 'app-step1',
   templateUrl: './step2.component.html',
   styleUrls: ['./step2.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Step2Component {
-  TESTIMONIALS!: readonly Testimonial[];
-  classArray!: readonly CardBackgroundColors[];
-  snippets!: readonly Snippet[];
-
-  constructor() {
-    this.TESTIMONIALS = TESTIMONIALS;
-    this.classArray = CARDBACKGROUNDCOLORS;
-    this.snippets = SNIPPETS;
-  }
+  readonly title = 'Deuxième étape';
+  readonly snippets = SNIPPETS;
+  readonly TESTIMONIALS = TESTIMONIALS;
+  readonly classArray = CARDBACKGROUNDCOLORS;
 }
 
 @NgModule({
-  imports: [CommonModule, CardModule, SharedModule],
+  imports: [CommonModule, StepLayoutModule, CardModule],
   declarations: [Step2Component],
   exports: [Step2Component],
 })
