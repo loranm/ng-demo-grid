@@ -1,10 +1,10 @@
-<ng-container *ngIf="asset$ | async as asset">
-  <app-step-layout [snippets]="asset.snippets" [title]="asset.title">
+<ng-container *ngIf="assets$ | async as assets">
+  <app-step-layout [snippets]="assets.snippets" [title]="assets.title">
     <ul role="list" class="testimonials__list">
-      <li *ngFor="let testimonial of asset.testimonials; let index = index">
+      <li *ngFor="let testimonial of assets.testimonials; let index = index">
         <app-card
           [testimonial]="testimonial"
-          [className]="asset.colors[index]"
+          [className]="assets.colors[index]"
         ></app-card>
       </li>
     </ul>

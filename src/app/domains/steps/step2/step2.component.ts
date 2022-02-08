@@ -1,13 +1,10 @@
 import { CommonModule } from '@angular/common';
-import {
-  Component,
-  ChangeDetectionStrategy,
-  NgModule,
-  OnInit,
-} from '@angular/core';
+import { Component, ChangeDetectionStrategy, NgModule } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { CardModule } from '@commons/card/card.component';
-import { StepAssetsService } from '@commons/services/step-assets.service';
 import { StepLayoutModule } from '@commons/step-layout/step-layout.component';
+import { StepAsset } from '@models/step-asset';
+import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Component({
@@ -15,12 +12,11 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./step2.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Step2Component implements OnInit {
-  constructor(private readonly assetsService: StepAssetsService) {}
-  assets$ = this.assetsService.asset$;
+export class Step2Component {
+  assets$!: Observable<StepAsset>;
 
-  ngOnInit(): void {
-    this.assetsService.setSelectedAsset('step-2');
+  constructor(private readonly route: ActivatedRoute) {
+    this.assets$ = this.route.data.pipe(map((data) => data.assets));
   }
 }
 

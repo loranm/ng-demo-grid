@@ -6,6 +6,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { SharedModule } from '@shared/shared.module';
 import { NavBarModule } from '@commons/nav-bar/nav-bar.component';
 import { StepAssetsService } from '@commons/services/step-assets.service';
+import { AssetsResolver } from '@commons/services/assets-resolver.resolver';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -16,6 +17,6 @@ import { StepAssetsService } from '@commons/services/step-assets.service';
     SharedModule,
     NavBarModule,
   ],
-  providers: [StepAssetsService],
+  providers: [StepAssetsService, AssetsResolver],
 })
 export class HomeModule {}

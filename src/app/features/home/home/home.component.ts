@@ -1,14 +1,8 @@
 import { Component, ChangeDetectionStrategy, OnDestroy } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { HomeRoutingEnum } from '../home-routing.enum';
-import { filter, map, takeUntil } from 'rxjs/operators';
-import {
-  BehaviorSubject,
-  combineLatest,
-  of,
-  SubscribableOrPromise,
-  Subscription,
-} from 'rxjs';
+import { filter, map } from 'rxjs/operators';
+import { BehaviorSubject, Subscription } from 'rxjs';
 import { STEPS } from './steps';
 
 @Component({

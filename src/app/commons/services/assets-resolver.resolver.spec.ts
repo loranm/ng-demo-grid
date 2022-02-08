@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AssetsResolverResolver } from './assets-resolver.resolver';
+import { AssetsResolver } from '@commons/services/assets-resolver.resolver';
 
 describe('AssetsResolverResolver', () => {
-  let resolver: AssetsResolverResolver;
+  let resolver: AssetsResolver;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    resolver = TestBed.inject(AssetsResolverResolver);
+    resolver = TestBed.inject(AssetsResolver);
   });
 
   it('should be created', () => {

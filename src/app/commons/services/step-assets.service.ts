@@ -3,29 +3,16 @@ import { SNIPPETS } from '@shared/data/snippets/step1';
 import { HomeRoutingEnum } from '@features/home/home-routing.enum';
 import { SNIPPETS_STEP2 } from '@shared/data/snippets/step2';
 
-import {
-  CARDBACKGROUNDCOLORS,
-  CardBackgroundColors,
-} from '@models/card-classes';
-import { Snippet } from '@models/snippet';
-import { Testimonial } from '@models/testimonial';
-import { TESTIMONIALS } from '@shared/data/testimonials';
-import { BehaviorSubject, combineLatest, Observable, of } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { CARDBACKGROUNDCOLORS } from '@models/card-classes';
+import { Observable, of } from 'rxjs';
 import { SNIPPETS_FINAL } from '@shared/data/snippets/final';
+import { StepAsset } from '@models/step-asset';
+import { TESTIMONIALS } from '@shared/data/testimonials';
+import { map } from 'rxjs/operators';
 
 export type StepId = 'step-1' | 'step-2' | 'final';
 
-export interface StepAsset {
-  id: StepId;
-  title: string;
-  route: HomeRoutingEnum;
-  testimonials: readonly Testimonial[];
-  colors: readonly CardBackgroundColors[];
-  snippets: readonly Snippet[];
-}
-
-export const ASSETS = [
+export const ASSETS: readonly StepAsset[] = [
   {
     id: 'step-1',
     title: 'Premiere Etape',
@@ -54,15 +41,11 @@ export const ASSETS = [
 
 @Injectable()
 export class StepAssetsService {
-  private selectedAssetAction$ = new BehaviorSubject<StepId>('step-1');
-
   assets$: Observable<readonly StepAsset[]> = of(ASSETS);
 
-  asset$ = combineLatest([this.assets$, this.selectedAssetAction$]).pipe(
-    map(([assets, id]) => assets.find((asset) => asset.id === id))
-  );
-
-  setSelectedAsset(id: StepId): void {
-    this.selectedAssetAction$.next(id);
+  getAssets(route: HomeRoutingEnum): Observable<StepAsset> {
+    return this.assets$.pipe(
+      map((assets) => assets.find((a) => a.route === route) as StepAsset)
+    );
   }
 }
