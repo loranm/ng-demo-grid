@@ -6,6 +6,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 const usedMatModules = [
   MatButtonModule,
@@ -13,6 +14,7 @@ const usedMatModules = [
   MatCardModule,
   MatToolbarModule,
   MatIconModule,
+  MatSidenavModule,
 ];
 
 @NgModule({

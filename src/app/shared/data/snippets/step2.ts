@@ -1,6 +1,6 @@
 import { Snippet } from 'src/app/models/snippet';
 
-export const SNIPPETS: readonly Snippet[] = [
+export const SNIPPETS_STEP2: readonly Snippet[] = [
   {
     label: 'Testimonials HTML',
     code: `

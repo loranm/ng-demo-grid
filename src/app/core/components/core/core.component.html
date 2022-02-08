@@ -1,3 +1,14 @@
-<main>
-  <router-outlet></router-outlet>
-</main>
+<app-nav-bar>
+  <button mat-icon-button (click)="snav.toggle()">
+    <mat-icon aria-hidden="true">menu</mat-icon>
+  </button>
+</app-nav-bar>
+
+<mat-sidenav-container class="core__nav-container">
+  <mat-sidenav #snav>Start</mat-sidenav>
+  <mat-sidenav-content>
+    <main class="core__main">
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

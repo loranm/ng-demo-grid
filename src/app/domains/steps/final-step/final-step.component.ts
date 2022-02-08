@@ -1,21 +1,25 @@
 import { CommonModule } from '@angular/common';
-import { Component, ChangeDetectionStrategy, NgModule } from '@angular/core';
+import {
+  Component,
+  ChangeDetectionStrategy,
+  NgModule,
+  OnInit,
+} from '@angular/core';
 import { CardModule } from '@commons/card/card.component';
+import { StepAssetsService } from '@commons/services/step-assets.service';
 import { StepLayoutModule } from '@commons/step-layout/step-layout.component';
-import { CARDBACKGROUNDCOLORS } from '@models/card-classes';
-import { TESTIMONIALS } from '@shared/data/testimonials';
-import { SNIPPETS } from './snippets';
 
 @Component({
   templateUrl: './final-step.component.html',
   styleUrls: ['./final-step.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FinalStepComponent {
-  readonly title = 'Dernière étape';
-  readonly snippets = SNIPPETS;
-  readonly TESTIMONIALS = TESTIMONIALS;
-  readonly classArray = CARDBACKGROUNDCOLORS;
+export class FinalStepComponent implements OnInit {
+  constructor(private assetsService: StepAssetsService) {}
+  asset$ = this.assetsService.asset$;
+  ngOnInit(): void {
+    this.assetsService.setSelectedAsset('final');
+  }
 }
 
 @NgModule({

@@ -6,6 +6,8 @@ import { CoreComponent } from '@core/components/core/core.component';
 import { FeaturesModule } from '@features/features.module';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SharedModule } from '@shared/shared.module';
+import { NavBarModule } from '@commons/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [CoreComponent],
@@ -22,6 +24,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HighlightModule,
     FeaturesModule,
     BrowserAnimationsModule,
+    SharedModule,
+    NavBarModule,
   ],
   providers: [
     {

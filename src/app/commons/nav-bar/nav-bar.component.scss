@@ -1,8 +1,5 @@
 .navbar {
-  position: sticky;
-  top: 0;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+  background-color: transparent;
   &__previous {
     grid-column: 1;
   }

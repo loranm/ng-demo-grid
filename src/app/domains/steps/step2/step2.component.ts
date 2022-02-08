@@ -1,21 +1,27 @@
 import { CommonModule } from '@angular/common';
-import { Component, ChangeDetectionStrategy, NgModule } from '@angular/core';
+import {
+  Component,
+  ChangeDetectionStrategy,
+  NgModule,
+  OnInit,
+} from '@angular/core';
 import { CardModule } from '@commons/card/card.component';
+import { StepAssetsService } from '@commons/services/step-assets.service';
 import { StepLayoutModule } from '@commons/step-layout/step-layout.component';
-import { CARDBACKGROUNDCOLORS } from '@models/card-classes';
-import { TESTIMONIALS } from '@shared/data/testimonials';
-import { SNIPPETS } from './snippets';
+import { map } from 'rxjs/operators';
 
 @Component({
   templateUrl: './step2.component.html',
   styleUrls: ['./step2.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Step2Component {
-  readonly title = 'Deuxième étape';
-  readonly snippets = SNIPPETS;
-  readonly TESTIMONIALS = TESTIMONIALS;
-  readonly classArray = CARDBACKGROUNDCOLORS;
+export class Step2Component implements OnInit {
+  constructor(private readonly assetsService: StepAssetsService) {}
+  assets$ = this.assetsService.asset$;
+
+  ngOnInit(): void {
+    this.assetsService.setSelectedAsset('step-2');
+  }
 }
 
 @NgModule({

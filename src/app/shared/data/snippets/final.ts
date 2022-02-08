@@ -1,6 +1,6 @@
-import { Snippet } from 'src/app/models/snippet';
+import { Snippet } from '@models/snippet';
 
-export const SNIPPETS: readonly Snippet[] = [
+export const SNIPPETS_FINAL: readonly Snippet[] = [
   {
     label: 'Testimonials HTML',
     code: `

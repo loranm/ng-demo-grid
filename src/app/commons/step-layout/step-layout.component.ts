@@ -9,7 +9,6 @@ import { CardModule } from '@commons/card/card.component';
 import { SeparatorModule } from '@commons/separator/separator.component';
 import { CARDBACKGROUNDCOLORS } from '@models/card-classes';
 import { Snippet } from '@models/snippet';
-import { TESTIMONIALS } from '@shared/data/testimonials';
 import { SharedModule } from '@shared/shared.module';
 
 @Component({

@@ -1,0 +1,10 @@
+.core {
+  &__nav-container {
+    background: transparent;
+  }
+
+  &__main {
+    width: min(100%, 72rem);
+    margin-inline: auto;
+  }
+}
