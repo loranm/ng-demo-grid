@@ -4,13 +4,34 @@ import { FeaturesRoutingEnum } from './features-routing.enum';
 
 const routes: Routes = [
   {
-    path: FeaturesRoutingEnum.Home,
-    loadChildren: () =>
-      import('./home/home.module').then((module) => module.HomeModule),
+    path: FeaturesRoutingEnum.Steps,
+    loadChildren: async () =>
+      (await import('./steps/steps.module')).StepsModule,
+  },
+  {
+    path: FeaturesRoutingEnum.Center,
+    loadChildren: async () =>
+      (await import('./center-stuffs/center-stuffs.module')).CenterStuffsModule,
+  },
+  {
+    path: FeaturesRoutingEnum.Move,
+    loadChildren: async () =>
+      (await import('./move-blocks/move-blocks.module')).MoveBlocksModule,
+  },
+  {
+    path: FeaturesRoutingEnum.Sandbox,
+    loadChildren: async () =>
+      (await import('./little-sandbox/little-sandbox.module'))
+        .LitleSandboxModule,
+  },
+  {
+    path: FeaturesRoutingEnum.Sizing,
+    loadChildren: async () =>
+      (await import('./sizing-blocks/sizing-blocks.module')).SizingBlocksModule,
   },
   {
     path: '',
-    redirectTo: FeaturesRoutingEnum.Home,
+    redirectTo: FeaturesRoutingEnum.Steps,
     pathMatch: 'full',
   },
 ];

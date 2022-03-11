@@ -1,0 +1,14 @@
+.center-stuffs {
+  --margin: 2rem;
+  display: grid;
+  outline: 1rem solid var(--clr-contrast);
+  margin: var(--margin);
+  height: calc(100vh - calc(2 * var(--margin)));
+
+  place-content: center;
+
+  &__bee {
+    width: 12.5rem;
+    height: 12.5rem;
+  }
+}

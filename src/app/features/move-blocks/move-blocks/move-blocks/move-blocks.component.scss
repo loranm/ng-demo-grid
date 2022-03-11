@@ -1,0 +1,14 @@
+.move-blocks {
+  --margin: 1rem;
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+  height: calc(100vh - calc(2 * var(--margin)));
+
+  &__block-list {
+    outline: 2rem solid var(--clr-contrast);
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+}
