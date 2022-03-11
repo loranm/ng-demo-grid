@@ -4,11 +4,3 @@ export enum CardBackgroundColors {
   Secondary500 = 'bg-secondary-500',
   Neutral100 = 'bg-neutral-100',
 }
-
-export const CARDBACKGROUNDCOLORS: readonly CardBackgroundColors[] = [
-  CardBackgroundColors.Primary400,
-  CardBackgroundColors.Secondary400,
-  CardBackgroundColors.Neutral100,
-  CardBackgroundColors.Secondary500,
-  CardBackgroundColors.Neutral100,
-] as const;

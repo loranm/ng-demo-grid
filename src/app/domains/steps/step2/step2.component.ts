@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, ChangeDetectionStrategy, NgModule } from '@angular/core';
 import { CardModule } from '@commons/card/card.component';
 import { StepLayoutModule } from '@commons/step-layout/step-layout.component';
-import { CARDBACKGROUNDCOLORS } from '@models/card-classes';
+import { CARDBACKGROUNDCOLORS } from '@shared/data/colors';
 import { TESTIMONIALS } from '@shared/data/testimonials';
 import { SNIPPETS } from './snippets';
 
