@@ -1,6 +1,7 @@
 .sizing-block {
   display: grid;
   gap: 2rem;
+  justify-items: center;
 
   &__header {
     margin-block: 2rem;
@@ -13,19 +14,10 @@
   }
 
   &__container {
+    width: max(50rem);
     display: grid;
-    gap: 2rem;
     border: 1rem solid var(--clr-contrast);
     border-radius: 1rem;
     padding: 1rem;
-
-    // grid-template-columns: 200px 200px;
-    // grid-template-columns: 25% 25% 25% 25%;
-    // grid-template-columns: 1fr 1fr;
-    // grid-template-columns: 200px 200px 2fr 1fr;
-    // grid-template-columns: 1fr 1fr 1fr 1fr;
-    // grid-template-columns: repeat(3, 1fr);
-    // grid-template-columns: 12.5rem repeat(3, 1fr) 1.25rem;
-    // grid-template-columns: auto repeat(3, 1fr);
   }
 }

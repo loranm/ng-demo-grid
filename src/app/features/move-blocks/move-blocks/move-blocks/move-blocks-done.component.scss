@@ -1,0 +1,10 @@
+.done {
+  display: grid;
+  gap: 2rem;
+  li {
+    &:nth-of-type(3) {
+      outline: 2px solid var(--clr-contrast);
+      grid-row-start: 1;
+    }
+  }
+}

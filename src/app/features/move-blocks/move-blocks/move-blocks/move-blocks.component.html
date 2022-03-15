@@ -5,7 +5,11 @@
     </app-separator>
   </header>
 
-  <ul class="move-blocks__block-list">
+  <app-done-toggle (toggleChange)="toggleChange()" id="toggle-label">
+    <h2 id="toggle-label">Voir le résultat</h2>
+  </app-done-toggle>
+
+  <ul class="move-blocks__container" [class.done]="isDone$ | async">
     <li *ngFor="let block of blocks; let i = index">
       <app-block>{{ i + 1 }}</app-block>
     </li>
