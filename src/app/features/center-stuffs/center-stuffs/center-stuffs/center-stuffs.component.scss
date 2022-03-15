@@ -1,14 +1,19 @@
 .center-stuffs {
-  --margin: 2rem;
   display: grid;
-  outline: 1rem solid var(--clr-contrast);
-  margin: var(--margin);
-  height: calc(100vh - calc(2 * var(--margin)));
+  gap: 1rem;
+  justify-items: center;
 
-  place-content: center;
+  &__toggle {
+  }
 
-  &__bee {
-    width: 12.5rem;
-    height: 12.5rem;
+  &__container {
+    border: 1rem solid var(--clr-contrast);
+    border-radius: 1rem;
+    width: 50vw;
+    height: 50vh;
+    &__bee {
+      width: 12.5rem;
+      height: 12.5rem;
+    }
   }
 }
