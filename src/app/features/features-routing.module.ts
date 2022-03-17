@@ -19,15 +19,20 @@ const routes: Routes = [
       (await import('./move-blocks/move-blocks.module')).MoveBlocksModule,
   },
   {
+    path: FeaturesRoutingEnum.Sizing,
+    loadChildren: async () =>
+      (await import('./sizing-blocks/sizing-blocks.module')).SizingBlocksModule,
+  },
+  {
     path: FeaturesRoutingEnum.Sandbox,
     loadChildren: async () =>
       (await import('./little-sandbox/little-sandbox.module'))
         .LitleSandboxModule,
   },
   {
-    path: FeaturesRoutingEnum.Sizing,
+    path: FeaturesRoutingEnum.Cardio,
     loadChildren: async () =>
-      (await import('./sizing-blocks/sizing-blocks.module')).SizingBlocksModule,
+      (await import('./cardio/cardio.module')).CardioModule,
   },
   {
     path: '',

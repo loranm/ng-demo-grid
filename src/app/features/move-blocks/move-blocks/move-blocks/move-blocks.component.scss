@@ -1,12 +1,28 @@
 .move-blocks {
   --margin: 1rem;
+  width: var(--max-width);
+  margin: auto;
   display: grid;
-  gap: 2rem;
-  justify-items: center;
+  gap: var(--gap);
+
+  &__header {
+    margin-top: 2rem;
+    &__title {
+      font-size: 2rem;
+    }
+  }
+
+  &__toggle {
+    display: grid;
+    justify-content: center;
+  }
+
   &__container {
-    width: max(50rem);
     border: 1rem solid var(--clr-contrast);
     border-radius: 1rem;
     padding: 1rem;
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat(3, 1fr);
   }
 }

@@ -1,10 +1,14 @@
 <section class="center-stuffs">
-  <header>
+  <header class="center-stuffs__header">
     <app-separator>
-      <h1>🎯Toujours au milieu 🎯</h1>
+      <h1 class="center-stuffs__header__title">🎯 Toujours au milieu 🎯</h1>
     </app-separator>
   </header>
-  <app-done-toggle (toggleChange)="toggleChange()" id="toggle-label">
+  <app-done-toggle
+    class="center-stuffs__toggle"
+    (toggleChange)="toggleChange()"
+    id="toggle-label"
+  >
     <h2 id="toggle-label">Voir le résultat</h2>
   </app-done-toggle>
   <div class="center-stuffs__container" [class.done]="isDone$ | async">

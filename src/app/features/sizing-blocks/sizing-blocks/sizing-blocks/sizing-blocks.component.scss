@@ -1,21 +1,22 @@
 .sizing-block {
   display: grid;
-  gap: 2rem;
-  justify-items: center;
+  gap: var(--gap);
+  width: var(--max-width);
+  margin: auto;
 
   &__header {
-    margin-block: 2rem;
-
+    margin-top: 2rem;
     &__title {
-      font-size: 3rem;
-      font-weight: bold;
-      word-spacing: 1.5;
+      font-size: 2rem;
     }
   }
 
-  &__container {
-    width: max(50rem);
+  &__toggle {
     display: grid;
+    justify-content: center;
+  }
+
+  &__container {
     border: 1rem solid var(--clr-contrast);
     border-radius: 1rem;
     padding: 1rem;

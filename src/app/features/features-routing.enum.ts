@@ -5,4 +5,6 @@ export enum FeaturesRoutingEnum {
   Move = 'deplacer',
   Sizing = 'dimensionner',
   Sandbox = 'sandbox',
+  Cardio = 'cardio',
+  Testimonials = 'Testimonials',
 }

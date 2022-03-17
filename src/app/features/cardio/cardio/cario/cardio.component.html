@@ -1,21 +1,20 @@
-<section class="sizing-block">
-  <header class="sizing-block__header">
+<section class="cardio">
+  <header class="cardio__header">
     <app-separator>
-      <h1 class="sizing-block__header__title">
-        📏 Dimensionner dans une grille 📏
-      </h1>
+      <h1 class="cardio__header__title">Cardio</h1>
     </app-separator>
+    <h2>Time to practice</h2>
   </header>
 
   <app-done-toggle
-    class="sizing-block__toggle"
+    class="cardio__toggle"
     (toggleChange)="toggleChange()"
     id="toggle-label"
   >
     <h2 id="toggle-label">Voir le résultat</h2>
   </app-done-toggle>
 
-  <ul class="sizing-block__container" [class.done]="isDone$ | async">
+  <ul class="cardio__container" [class.done]="isDone$ | async">
     <li *ngFor="let block of blocks; let i = index">
       <app-block>
         {{ i + 1 }}

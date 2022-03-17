@@ -13,8 +13,19 @@ interface Step {
 })
 export class StepsComponent {
   steps: Step[] = [
-    { label: 'Centrer des trucs', path: FeaturesRoutingEnum.Center },
-    { label: 'Dimensionner des blocs', path: FeaturesRoutingEnum.Sizing },
-    { label: 'Déplacer des blocs', path: FeaturesRoutingEnum.Move },
+    { label: '🎯 Centrer des trucs 🎯 ', path: FeaturesRoutingEnum.Center },
+    {
+      label: '📏 Dimensionner dans une grille 📏',
+      path: FeaturesRoutingEnum.Sizing,
+    },
+    { label: '🏋️‍♂️ Déplacer des blocs 🏋️‍♂️', path: FeaturesRoutingEnum.Move },
+    {
+      label: '💛 Cardio (time to practice) 💛',
+      path: FeaturesRoutingEnum.Cardio,
+    },
+    {
+      label: '🦄 Dans la vraie vie 🦄 ',
+      path: FeaturesRoutingEnum.Testimonials,
+    },
   ];
 }
