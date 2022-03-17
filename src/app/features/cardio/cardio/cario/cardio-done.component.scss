@@ -1,8 +1,7 @@
 .cardio__container {
   &.done {
     /* Make the grid 10 columns wide, every other taking up twice the free space */
-    /* Make the grid have 10 explicit rows, 50px high each */
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(5, 1fr 2fr);
     /* Make the grid have 10 explicit rows, 50px high each */
     grid-template-rows: repeat(10, 3.125rem);
 
