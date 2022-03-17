@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { BlockGeneratorService } from '@commons/utils/block-generator.service';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
@@ -13,12 +14,8 @@ export class MoveBlocksComponent {
   blocks: number[];
   isDone$ = new BehaviorSubject(false);
 
-  constructor() {
-    this.blocks = this.getBlocks();
-  }
-
-  getBlocks(blocks = 10): number[] {
-    return Array(blocks);
+  constructor(private readonly blockService: BlockGeneratorService) {
+    this.blocks = this.blockService.generate();
   }
 
   toggleChange(): void {

@@ -1,8 +1,8 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { BlockGeneratorService } from '@commons/utils/block-generator.service';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
-  selector: 'app-cario',
   templateUrl: './cardio.component.html',
   styleUrls: ['./cardio.component.scss', './cardio-done.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -10,12 +10,9 @@ import { BehaviorSubject } from 'rxjs';
 export class CardioComponent {
   blocks: number[];
   isDone$ = new BehaviorSubject(false);
-  constructor() {
-    this.blocks = this.getBlocks(15);
-  }
 
-  getBlocks(blocks = 10): number[] {
-    return Array(blocks);
+  constructor(private readonly block: BlockGeneratorService) {
+    this.blocks = this.block.generate(30);
   }
 
   toggleChange(): void {

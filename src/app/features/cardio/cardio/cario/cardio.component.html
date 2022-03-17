@@ -3,7 +3,7 @@
     <app-separator>
       <h1 class="cardio__header__title">Cardio</h1>
     </app-separator>
-    <h2>Time to practice</h2>
+    <h2 class="cardio__header__sub-title">Time to practice</h2>
   </header>
 
   <app-done-toggle
@@ -15,7 +15,10 @@
   </app-done-toggle>
 
   <ul class="cardio__container" [class.done]="isDone$ | async">
-    <li *ngFor="let block of blocks; let i = index">
+    <li
+      *ngFor="let block of blocks; let i = index"
+      [attr.id]="'item' + (i + 1)"
+    >
       <app-block>
         {{ i + 1 }}
       </app-block>
