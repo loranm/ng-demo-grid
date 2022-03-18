@@ -1,22 +1,11 @@
 .cardio {
   display: grid;
   gap: var(--gap);
-  width: var(--max-width);
-  margin: auto;
-
-  &__header {
-    margin-top: 2rem;
-    display: grid;
-    gap: var(--gap);
-    &__title {
-      font-size: 2rem;
-    }
-    &__sub-title {
-      display: flex;
-      justify-content: center;
-      font-style: italic;
-      color: var(--clr-contrast);
-    }
+  &__sub-title {
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+    color: var(--clr-contrast);
   }
 
   &__toggle {

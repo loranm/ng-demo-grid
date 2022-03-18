@@ -9,6 +9,7 @@ import { MinmaxComponent } from './steps-component/minmax/minmax.component';
 import { SizingBlocksComponent } from './steps-component/sizing-blocks/sizing-blocks.component';
 import { StepsComponent } from './steps-component/steps/steps.component';
 import { StepsRoutingEnum } from './steps-routing.enum';
+import { HeaderTitleResolver } from '@commons/resolvers/header-title.resolver';
 
 const routes: Routes = [
   {
@@ -18,30 +19,49 @@ const routes: Routes = [
       {
         path: StepsRoutingEnum.Selector,
         component: StepPickerComponent,
+        data: { title: '🧑‍🍳 Passez votre CSS aux Grilles 🧑‍🍳' },
       },
       {
         path: StepsRoutingEnum.Center,
         component: CenterStuffsComponent,
+        resolve: {
+          title: HeaderTitleResolver,
+        },
       },
       {
         path: StepsRoutingEnum.Sizing,
         component: SizingBlocksComponent,
+        resolve: {
+          title: HeaderTitleResolver,
+        },
       },
       {
         path: StepsRoutingEnum.Move,
         component: MoveBlocksComponent,
+        resolve: {
+          title: HeaderTitleResolver,
+        },
       },
       {
         path: StepsRoutingEnum.Cardio,
         component: CardioComponent,
+        resolve: {
+          title: HeaderTitleResolver,
+        },
       },
       {
         path: StepsRoutingEnum.AlignCenter,
         component: AlignCenterComponent,
+        resolve: {
+          title: HeaderTitleResolver,
+        },
       },
       {
         path: StepsRoutingEnum.MinMax,
         component: MinmaxComponent,
+        resolve: {
+          title: HeaderTitleResolver,
+        },
       },
       {
         path: '',
