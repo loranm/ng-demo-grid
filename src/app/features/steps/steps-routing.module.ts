@@ -1,64 +1,57 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { StepPickerComponent } from '@features/steps/steps-component/step-picker/step-picker.component';
-import { AlignCenterComponent } from './steps-component/align-center/align-center.component';
-import { CardioComponent } from './steps-component/cardio/cardio/cardio.component';
-import { MoveBlocksComponent } from './steps-component/move-blocks/move-blocks.component';
-import { CenterStuffsComponent } from './steps-component/center-stuffs/center-stuffs.component';
-import { MinmaxComponent } from './steps-component/minmax/minmax.component';
-import { SizingBlocksComponent } from './steps-component/sizing-blocks/sizing-blocks.component';
-import { StepsComponent } from './steps-component/steps/steps.component';
-import { StepsRoutingEnum } from './steps-routing.enum';
+import { StepsRoutingEnum } from '@features/steps/steps-routing.enum';
 import { HeaderTitleResolver } from '@commons/resolvers/header-title.resolver';
+import * as components from '@features/steps/steps-component';
 
 const routes: Routes = [
   {
     path: '',
-    component: StepsComponent,
+    component: components.StepsComponent,
     children: [
       {
         path: StepsRoutingEnum.Selector,
-        component: StepPickerComponent,
+        component: components.StepPickerComponent,
         data: { title: '🧑‍🍳 Passez votre CSS aux Grilles 🧑‍🍳' },
       },
       {
         path: StepsRoutingEnum.Center,
-        component: CenterStuffsComponent,
+        component: components.CenterStuffsComponent,
         resolve: {
           title: HeaderTitleResolver,
         },
       },
       {
         path: StepsRoutingEnum.Sizing,
-        component: SizingBlocksComponent,
+        component: components.SizingBlocksComponent,
         resolve: {
           title: HeaderTitleResolver,
         },
       },
       {
         path: StepsRoutingEnum.Move,
-        component: MoveBlocksComponent,
+        component: components.MoveBlocksComponent,
         resolve: {
           title: HeaderTitleResolver,
         },
       },
       {
         path: StepsRoutingEnum.Cardio,
-        component: CardioComponent,
+        component: components.CardioComponent,
         resolve: {
           title: HeaderTitleResolver,
         },
       },
       {
         path: StepsRoutingEnum.AlignCenter,
-        component: AlignCenterComponent,
+        component: components.AlignCenterComponent,
         resolve: {
           title: HeaderTitleResolver,
         },
       },
       {
         path: StepsRoutingEnum.MinMax,
-        component: MinmaxComponent,
+        component: components.MinmaxComponent,
         resolve: {
           title: HeaderTitleResolver,
         },

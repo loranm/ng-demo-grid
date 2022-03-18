@@ -4,11 +4,8 @@
   width: var(--max-width);
   margin: auto;
 
-  &__header {
-    margin-top: 2rem;
-    &__title {
-      font-size: 2rem;
-    }
+  &__title {
+    font-size: 2rem;
   }
 
   &__board {

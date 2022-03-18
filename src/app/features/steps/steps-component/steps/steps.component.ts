@@ -1,28 +1,24 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  ComponentFactoryResolver,
-  OnInit,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-import { Observable, of, Subject } from 'rxjs';
-import { filter, map, switchMap, tap } from 'rxjs/operators';
-import { STEPS } from './steps';
+import { Subscription } from 'rxjs';
+import { filter, map, switchMap } from 'rxjs/operators';
+import { STEPS } from '../../../../shared/data/steps';
 
 @Component({
   templateUrl: './steps.component.html',
   styleUrls: ['./steps.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class StepsComponent {
+export class StepsComponent implements OnDestroy {
   steps = STEPS;
   title!: string;
+  sub: Subscription;
 
   constructor(
     private readonly router: Router,
     private readonly route: ActivatedRoute
   ) {
-    this.router.events
+    this.sub = this.router.events
       .pipe(
         filter(
           (event): event is NavigationEnd => event instanceof NavigationEnd
@@ -30,15 +26,12 @@ export class StepsComponent {
         switchMap(() =>
           this.route.firstChild ? this.route.firstChild.data : this.route.data
         ),
-        map((data) => {
-          console.log(
-            '🚀 ~ file: steps.component.ts ~ line 34 ~ StepsComponent ~ map ~ data',
-            data
-          );
-
-          return data.title;
-        })
+        map(({ title }) => title)
       )
-      .subscribe((value) => (this.title = value));
+      .subscribe({ next: (value) => (this.title = value) });
+  }
+
+  ngOnDestroy(): void {
+    this.sub.unsubscribe();
   }
 }

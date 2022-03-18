@@ -7,7 +7,6 @@ import {
   Input,
 } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { FeaturesRoutingEnum } from '@features/features-routing.enum';
 
 @Component({
   selector: 'app-link-button',

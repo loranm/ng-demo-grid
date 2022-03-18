@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import {
-  Router,
   Resolve,
   RouterStateSnapshot,
   ActivatedRouteSnapshot,
@@ -11,14 +10,12 @@ import { Observable, of } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class HeaderTitleResolver implements Resolve<string> {
+export class HeaderTitleResolver implements Resolve<string | void> {
   constructor(private readonly titleFromRoute: TitleFromRouteService) {}
   resolve(
     route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ): Observable<string> {
-    const x = this.titleFromRoute.getTitle(route);
-
-    return of(x);
+    _: RouterStateSnapshot
+  ): Observable<string | void> {
+    return of(this.titleFromRoute.getTitle(route));
   }
 }

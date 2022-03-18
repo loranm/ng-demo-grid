@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { STEPS } from '../steps/steps';
+import { STEPS } from '@shared/data/steps';
 
 @Component({
   selector: 'app-step-picker',

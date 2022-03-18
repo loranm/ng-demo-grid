@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { STEPS } from '@features/steps/steps-component/steps/steps';
+import { STEPS } from '@shared/data/steps';
 
 @Injectable({
   providedIn: 'root',
@@ -7,10 +7,10 @@ import { STEPS } from '@features/steps/steps-component/steps/steps';
 export class TitleFromRouteService {
   steps = STEPS;
 
-  getTitle(route: any): string {
-    const title =
-      this.steps.find((step) => step.path.endsWith(route.routeConfig.path))
-        ?.label ?? 'Passez votre CSS aux Grilles';
+  getTitle(route: any): string | void {
+    const title = this.steps.find((step) =>
+      step.path.endsWith(route.routeConfig.path)
+    )?.label;
     return title;
   }
 }

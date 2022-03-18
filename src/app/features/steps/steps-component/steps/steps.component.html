@@ -1,8 +1,6 @@
 <section class="steps">
-  <header class="steps__header">
-    <app-separator>
-      <h1 class="steps__header__title">{{ title }}</h1>
-    </app-separator>
-  </header>
+  <app-step-header>
+    <h1 class="steps__title">{{ title }}</h1>
+  </app-step-header>
   <router-outlet></router-outlet>
 </section>

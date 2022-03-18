@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FeaturesRoutingEnum } from './features-routing.enum';
+import { FeaturesRoutingEnum } from '@features/features-routing.enum';
 
 const routes: Routes = [
   {

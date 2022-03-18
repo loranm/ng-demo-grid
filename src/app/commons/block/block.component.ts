@@ -11,11 +11,7 @@ import {
   styleUrls: ['./block.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class BlockComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
-}
+export class BlockComponent {}
 
 @NgModule({
   declarations: [BlockComponent],
