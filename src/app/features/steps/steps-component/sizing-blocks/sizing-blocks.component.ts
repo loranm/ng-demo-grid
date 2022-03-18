@@ -1,9 +1,8 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { BlockGeneratorService } from '@commons/utils/block-generator.service';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
-  selector: 'app-sizing-blocks',
   templateUrl: './sizing-blocks.component.html',
   styleUrls: [
     './sizing-blocks.component.scss',

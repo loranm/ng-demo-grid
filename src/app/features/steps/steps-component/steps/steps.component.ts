@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, OnDestroy } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { filter, map, switchMap } from 'rxjs/operators';
-import { STEPS } from '../../../../shared/data/steps';
+import { STEPS } from '@shared/data/steps';
 
 @Component({
   templateUrl: './steps.component.html',

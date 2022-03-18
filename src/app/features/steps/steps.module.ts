@@ -32,7 +32,6 @@ import {
     CommonModule,
     StepsRoutingModule,
     LinkButtonModule,
-    SeparatorModule,
     DoneToggleModule,
     BlockModule,
     StepHeaderModule,

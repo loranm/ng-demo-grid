@@ -2,7 +2,6 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
-  selector: 'app-center-stuffs',
   templateUrl: './center-stuffs.component.html',
   styleUrls: [
     './center-stuffs.component.scss',

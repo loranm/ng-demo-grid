@@ -1,9 +1,8 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { BlockGeneratorService } from '@commons/utils/block-generator.service';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
-  selector: 'app-minmax',
   templateUrl: './minmax.component.html',
   styleUrls: ['./minmax.component.scss', './minmax-done.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

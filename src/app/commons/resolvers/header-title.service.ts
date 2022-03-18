@@ -4,13 +4,11 @@ import { STEPS } from '@shared/data/steps';
 @Injectable({
   providedIn: 'root',
 })
-export class TitleFromRouteService {
+export class HeaderTitleService {
   steps = STEPS;
 
   getTitle(route: any): string | void {
-    const title = this.steps.find((step) =>
-      step.path.endsWith(route.routeConfig.path)
-    )?.label;
-    return title;
+    return this.steps.find((step) => step.path.endsWith(route.routeConfig.path))
+      ?.label;
   }
 }

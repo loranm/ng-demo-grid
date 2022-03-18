@@ -4,18 +4,18 @@ import {
   RouterStateSnapshot,
   ActivatedRouteSnapshot,
 } from '@angular/router';
-import { TitleFromRouteService } from '@commons/services/title-from-route.service';
 import { Observable, of } from 'rxjs';
+import { HeaderTitleService } from './header-title.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class HeaderTitleResolver implements Resolve<string | void> {
-  constructor(private readonly titleFromRoute: TitleFromRouteService) {}
+  constructor(private readonly headerTitleFromRoute: HeaderTitleService) {}
   resolve(
     route: ActivatedRouteSnapshot,
     _: RouterStateSnapshot
   ): Observable<string | void> {
-    return of(this.titleFromRoute.getTitle(route));
+    return of(this.headerTitleFromRoute.getTitle(route));
   }
 }
