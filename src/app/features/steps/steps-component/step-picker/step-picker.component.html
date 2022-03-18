@@ -1,0 +1,7 @@
+<ul class="steps-board">
+  <li *ngFor="let step of steps" class="steps__board__item">
+    <app-link-button [path]="step.path">
+      {{ step.label }}
+    </app-link-button>
+  </li>
+</ul>

@@ -1,0 +1,19 @@
+<section role="region" class="align-center">
+  <header class="align-center__header">
+    <app-separator>
+      <h1 class="align-center__header__title">Aligner et centrer</h1>
+    </app-separator>
+  </header>
+
+  <app-done-toggle
+    class="align-center__toggle"
+    (toggleChange)="toggleChange()"
+    id="toggle-label"
+  >
+    <h2 id="toggle-label">Voir le résultat</h2>
+  </app-done-toggle>
+
+  <ul class="align-center__container" [class.done]="isDone$ | async">
+    <li *ngFor="let block of blocks; let i = index">{{ i + 1 }}</li>
+  </ul>
+</section>

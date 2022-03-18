@@ -8,32 +8,44 @@ const routes: Routes = [
     loadChildren: async () =>
       (await import('./steps/steps.module')).StepsModule,
   },
-  {
-    path: FeaturesRoutingEnum.Center,
-    loadChildren: async () =>
-      (await import('./center-stuffs/center-stuffs.module')).CenterStuffsModule,
-  },
-  {
-    path: FeaturesRoutingEnum.Move,
-    loadChildren: async () =>
-      (await import('./move-blocks/move-blocks.module')).MoveBlocksModule,
-  },
-  {
-    path: FeaturesRoutingEnum.Sizing,
-    loadChildren: async () =>
-      (await import('./sizing-blocks/sizing-blocks.module')).SizingBlocksModule,
-  },
-  {
-    path: FeaturesRoutingEnum.Sandbox,
-    loadChildren: async () =>
-      (await import('./little-sandbox/little-sandbox.module'))
-        .LitleSandboxModule,
-  },
-  {
-    path: FeaturesRoutingEnum.Cardio,
-    loadChildren: async () =>
-      (await import('./cardio/cardio.module')).CardioModule,
-  },
+  // {
+  //   path: FeaturesRoutingEnum.Center,
+  //   loadChildren: async () =>
+  //     (await import('./center-stuffs/center-stuffs.module')).CenterStuffsModule,
+  // },
+  // {
+  //   path: FeaturesRoutingEnum.Move,
+  //   loadChildren: async () =>
+  //     (await import('./move-blocks/move-blocks.module')).MoveBlocksModule,
+  // },
+  // {
+  //   path: FeaturesRoutingEnum.Sizing,
+  //   loadChildren: async () =>
+  //     (await import('./sizing-blocks/sizing-blocks.module')).SizingBlocksModule,
+  // },
+  // {
+  //   path: FeaturesRoutingEnum.Sandbox,
+  //   loadChildren: async () =>
+  //     (await import('./little-sandbox/little-sandbox.module'))
+  //       .LitleSandboxModule,
+  // },
+  // {
+  //   path: FeaturesRoutingEnum.Cardio,
+  //   loadChildren: async () =>
+  //     (await import('./cardio/cardio.module')).CardioModule,
+  // },
+  // {
+  //   path: FeaturesRoutingEnum.MinMax,
+  //   loadChildren: async () =>
+  //     (await import('./minmax/minmax.module')).MinmaxModule,
+  // },
+  // {
+  //   path: FeaturesRoutingEnum.AlignCenter,
+  //   loadChildren: async () =>
+  //     await (
+  //       await import('./align-center/align-center.module')
+  //     ).AlignCenterModule,
+  // },
   {
     path: '',
     redirectTo: FeaturesRoutingEnum.Steps,

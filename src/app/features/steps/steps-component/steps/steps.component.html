@@ -1,15 +1,17 @@
 <section class="steps">
-  <header>
+  <header class="steps__header">
     <app-separator>
-      <h1>🔥 Passez votre CSS au Grill 🔥</h1>
+      <h1 class="steps__header__title">🔥 Passez votre CSS au Grill 🔥</h1>
     </app-separator>
   </header>
 
-  <ul class="steps__board">
+  <router-outlet></router-outlet>
+
+  <!-- <ul class="steps__board">
     <li *ngFor="let step of steps" class="steps__board__item">
       <app-link-button [path]="step.path">
         {{ step.label }}
       </app-link-button>
     </li>
-  </ul>
+  </ul> -->
 </section>

@@ -16,7 +16,7 @@ import { FeaturesRoutingEnum } from '@features/features-routing.enum';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LinkButtonComponent {
-  @Input() path!: FeaturesRoutingEnum;
+  @Input() path!: string;
 
   get isValid() {
     return Boolean(this.path);

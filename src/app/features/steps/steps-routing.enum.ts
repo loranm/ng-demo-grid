@@ -1,7 +1,6 @@
-export enum FeaturesRoutingEnum {
-  Home = 'home',
-  Steps = 'steps',
-  Center = 'center',
+export enum StepsRoutingEnum {
+  Selector = 'choisir',
+  Center = 'centrer',
   Move = 'deplacer',
   Sizing = 'dimensionner',
   Sandbox = 'sandbox',

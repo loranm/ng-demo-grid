@@ -1,9 +1,8 @@
-.move-blocks {
-  --margin: 1rem;
-  width: var(--max-width);
-  margin: auto;
+.minmax {
   display: grid;
   gap: var(--gap);
+  width: var(--max-width);
+  margin: auto;
 
   &__header {
     margin-top: 2rem;
@@ -19,8 +18,8 @@
 
   &__container {
     border: 1rem solid var(--clr-contrast);
-    border-radius: 1rem;
-    padding: 1rem;
+    border-radius: var(--border-radius);
+    padding: var(--padding);
     display: grid;
     gap: var(--gap);
     grid-template-columns: repeat(3, 1fr);

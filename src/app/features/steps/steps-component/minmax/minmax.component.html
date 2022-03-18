@@ -1,0 +1,26 @@
+<section class="minmax">
+  <header class="minmax__header">
+    <app-separator>
+      <h1 class="minmax__header__title">🤔 minmax Auto-fill Auto-fit 🤔</h1>
+    </app-separator>
+  </header>
+
+  <app-done-toggle
+    class="minmax__toggle"
+    (toggleChange)="toggleChange()"
+    id="toggle-label"
+  >
+    <h2 id="toggle-label">Voir le résultat</h2>
+  </app-done-toggle>
+
+  <ul class="minmax__container" [class.done]="isDone$ | async">
+    <li
+      *ngFor="let block of blocks; let i = index"
+      [attr.id]="'item' + (i + 1)"
+    >
+      <app-block>
+        <p>item {{ i + 1 }}</p>
+      </app-block>
+    </li>
+  </ul>
+</section>
