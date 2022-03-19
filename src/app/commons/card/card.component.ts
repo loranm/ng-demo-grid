@@ -5,7 +5,7 @@ import {
   NgModule,
   Input,
 } from '@angular/core';
-import { Testimonial } from 'src/app/models/testimonial';
+import { Testimonial } from '@models/testimonial';
 
 @Component({
   selector: 'app-card',

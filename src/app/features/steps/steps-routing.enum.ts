@@ -5,7 +5,7 @@ export enum StepsRoutingEnum {
   Sizing = 'dimensionner',
   Sandbox = 'sandbox',
   Cardio = 'cardio',
-  Testimonials = 'Testimonials',
+  Testimonials = 'testimonials',
   MinMax = 'minmax',
   AlignCenter = 'aligner-centrer',
 }

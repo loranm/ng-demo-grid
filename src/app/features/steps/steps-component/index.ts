@@ -6,3 +6,4 @@ export * from '@features/steps/steps-component/steps';
 export * from '@features/steps/steps-component/move-blocks';
 export * from '@features/steps/steps-component/sizing-blocks';
 export * from '@features/steps/steps-component/cardio';
+export * from '@features/steps/steps-component/testimonials';

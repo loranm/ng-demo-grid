@@ -1,0 +1,12 @@
+.testimonials {
+  display: grid;
+  gap: var(--gap);
+
+  &__toggle {
+    display: grid;
+    justify-content: center;
+  }
+
+  &__list {
+  }
+}

@@ -1,4 +1,4 @@
-import { Snippet } from 'src/app/models/snippet';
+import { Snippet } from '@models/snippet';
 
 export const SNIPPETS: readonly Snippet[] = [
   {

@@ -15,7 +15,10 @@ import {
   SizingBlocksComponent,
   StepPickerComponent,
   StepsComponent,
+  Testimonials,
 } from '@features/steps/steps-component';
+import { CardModule } from '@commons/card/card.component';
+import { StepLayoutModule } from '@commons/step-layout/step-layout.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,7 @@ import {
     CardioComponent,
     AlignCenterComponent,
     MinmaxComponent,
+    Testimonials,
   ],
   imports: [
     CommonModule,
@@ -35,6 +39,8 @@ import {
     DoneToggleModule,
     BlockModule,
     StepHeaderModule,
+    CardModule,
+    StepLayoutModule,
   ],
 })
 export class StepsModule {}
