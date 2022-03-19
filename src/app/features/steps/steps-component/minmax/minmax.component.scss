@@ -1,0 +1,27 @@
+.minmax {
+  display: grid;
+  gap: var(--gap);
+  width: var(--max-width);
+  margin: auto;
+
+  &__header {
+    margin-top: 2rem;
+    &__title {
+      font-size: 2rem;
+    }
+  }
+
+  &__toggle {
+    display: grid;
+    justify-content: center;
+  }
+
+  &__container {
+    border: 1rem solid var(--clr-contrast);
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

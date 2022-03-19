@@ -5,6 +5,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
 const usedMatModules = [
@@ -13,6 +14,7 @@ const usedMatModules = [
   MatCardModule,
   MatToolbarModule,
   MatIconModule,
+  MatSlideToggleModule,
 ];
 
 @NgModule({

@@ -1,0 +1,20 @@
+<section class="minmax">
+  <app-done-toggle
+    class="minmax__toggle"
+    (toggleChange)="toggleChange()"
+    id="toggle-label"
+  >
+    <h2 id="toggle-label">Voir le résultat</h2>
+  </app-done-toggle>
+
+  <ul class="minmax__container" [class.done]="isDone$ | async">
+    <li
+      *ngFor="let block of blocks; let i = index"
+      [attr.id]="'item' + (i + 1)"
+    >
+      <app-block>
+        <p>item {{ i + 1 }}</p>
+      </app-block>
+    </li>
+  </ul>
+</section>

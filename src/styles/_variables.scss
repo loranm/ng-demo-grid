@@ -5,6 +5,7 @@
   --clr-neutral-100: hsl(0 0% 100%);
   --clr-neutral-200: hsl(210 46% 95%);
   --clr-neutral-300: hsl(0 0% 81%);
+  --clr-contrast: hsl(47, 100%, 50%);
 
   --ff-primary: "Barlow Semi Condensed", sans-serif;
 
@@ -16,5 +17,9 @@
   --fs-500: 1.25rem;
 
   --margin: 1.25rem;
-  --padding: 3rem;
+  --padding: 1rem;
+  --border-radius: 10px;
+
+  --max-width: min(95%, 70rem);
+  --gap: 2rem;
 }

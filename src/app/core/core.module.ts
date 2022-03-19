@@ -6,6 +6,7 @@ import { CoreComponent } from '@core/components/core/core.component';
 import { FeaturesModule } from '@features/features.module';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { environment } from '@environment';
 
 @NgModule({
   declarations: [CoreComponent],

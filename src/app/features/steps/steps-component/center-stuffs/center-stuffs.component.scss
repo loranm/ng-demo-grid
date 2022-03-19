@@ -1,0 +1,21 @@
+.center-stuffs {
+  display: grid;
+  gap: var(--gap);
+  width: var(--max-width);
+  margin: auto;
+
+  &__toggle {
+    display: grid;
+    justify-content: center;
+  }
+
+  &__container {
+    border: 1rem solid var(--clr-contrast);
+    border-radius: 1rem;
+    height: 50vh;
+    &__bee {
+      width: 12.5rem;
+      height: 12.5rem;
+    }
+  }
+}

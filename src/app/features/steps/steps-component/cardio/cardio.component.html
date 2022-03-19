@@ -1,0 +1,22 @@
+<section class="cardio">
+  <h2 class="cardio__sub-title">Time to practice</h2>
+
+  <app-done-toggle
+    class="cardio__toggle"
+    (toggleChange)="toggleChange()"
+    id="toggle-label"
+  >
+    <h2 id="toggle-label">Voir le résultat</h2>
+  </app-done-toggle>
+
+  <ul class="cardio__container" [class.done]="isDone$ | async">
+    <li
+      *ngFor="let block of blocks; let i = index"
+      [attr.id]="'item' + (i + 1)"
+    >
+      <app-block>
+        {{ i + 1 }}
+      </app-block>
+    </li>
+  </ul>
+</section>

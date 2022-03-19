@@ -1,0 +1,37 @@
+.cardio {
+  display: grid;
+  gap: var(--gap);
+  &__sub-title {
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+    color: var(--clr-contrast);
+  }
+
+  &__toggle {
+    display: grid;
+    justify-content: center;
+  }
+
+  &__container {
+    border: 1rem solid var(--clr-contrast);
+    border-radius: 1rem;
+    padding: 1rem;
+    display: grid;
+    gap: var(--gap);
+
+    /* With Item 1, start at col 3 and go until 5 */
+
+    /* With Item 2, start at col 5 and go until the end */
+
+    /* Make Item 5 double span 2 cols and rows */
+
+    /* Make Item 8 two rows high */
+
+    /* Make Item 15 span the entire grid width */
+
+    /* Make item 18 span 4 widths, but end at 9 */
+
+    /* Make item 20 start at row 4 and have a height of 3 rows */
+  }
+}

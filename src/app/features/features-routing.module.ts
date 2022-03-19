@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FeaturesRoutingEnum } from './features-routing.enum';
+import { FeaturesRoutingEnum } from '@features/features-routing.enum';
 
 const routes: Routes = [
   {
-    path: FeaturesRoutingEnum.Home,
-    loadChildren: () =>
-      import('./home/home.module').then((module) => module.HomeModule),
+    path: FeaturesRoutingEnum.Steps,
+    loadChildren: async () =>
+      (await import('./steps/steps.module')).StepsModule,
   },
   {
     path: '',
-    redirectTo: FeaturesRoutingEnum.Home,
+    redirectTo: FeaturesRoutingEnum.Steps,
     pathMatch: 'full',
   },
 ];

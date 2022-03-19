@@ -1,0 +1,17 @@
+.sizing-block {
+  display: grid;
+  gap: var(--gap);
+  width: var(--max-width);
+  margin: auto;
+
+  &__toggle {
+    display: grid;
+    justify-content: center;
+  }
+
+  &__container {
+    border: 1rem solid var(--clr-contrast);
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+}

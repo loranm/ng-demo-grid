@@ -1,0 +1,16 @@
+<section class="center-stuffs">
+  <app-done-toggle
+    class="center-stuffs__toggle"
+    (toggleChange)="toggleChange()"
+    id="toggle-label"
+  >
+    <h2 id="toggle-label">Voir le résultat</h2>
+  </app-done-toggle>
+  <div class="center-stuffs__container" [class.done]="isDone$ | async">
+    <img
+      [src]="bee"
+      alt="une jolie abeille"
+      class="center-stuffs__container__bee"
+    />
+  </div>
+</section>
