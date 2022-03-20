@@ -19,7 +19,7 @@ import {
   TestimonialsResponsiveComponent,
 } from '@features/steps/steps-component';
 import { CardModule } from '@commons/card/card.component';
-import { StepLayoutModule } from '@commons/step-layout/step-layout.component';
+import { CodeModule } from '@commons/code/code.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +42,7 @@ import { StepLayoutModule } from '@commons/step-layout/step-layout.component';
     BlockModule,
     StepHeaderModule,
     CardModule,
-    StepLayoutModule,
+    CodeModule,
   ],
 })
 export class StepsModule {}

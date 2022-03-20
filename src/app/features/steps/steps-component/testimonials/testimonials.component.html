@@ -8,18 +8,18 @@
     <h2 id="toggle-label">Voir le résultat</h2>
   </app-done-toggle>
 
-  <app-step-layout [snippets]="snippets">
-    <ul role="list" class="testimonials__list" [class.done]="isDone$ | async">
-      <li
-        class="testimonials__list__item"
-        *ngFor="let testimonial of TESTIMONIALS; let i = index"
-        [id]="'testimonial_' + (i + 1)"
-      >
-        <app-card
-          [testimonial]="testimonial"
-          [className]="classArray[i]"
-        ></app-card>
-      </li>
-    </ul>
-  </app-step-layout>
+  <ul role="list" class="testimonials__list" [class.done]="isDone$ | async">
+    <li
+      class="testimonials__list__item"
+      *ngFor="let testimonial of TESTIMONIALS; let i = index"
+      [id]="'testimonial_' + (i + 1)"
+    >
+      <app-card
+        [testimonial]="testimonial"
+        [className]="classArray[i]"
+      ></app-card>
+    </li>
+  </ul>
+
+  <app-code [snippets]="snippets"></app-code>
 </section>
