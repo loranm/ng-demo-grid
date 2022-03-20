@@ -64,6 +64,13 @@ const routes: Routes = [
         },
       },
       {
+        path: StepsRoutingEnum.TestimonialsResponsive,
+        component: components.TestimonialsResponsiveComponent,
+        resolve: {
+          title: HeaderTitleResolver,
+        },
+      },
+      {
         path: '',
         redirectTo: StepsRoutingEnum.Selector,
         pathMatch: 'full',

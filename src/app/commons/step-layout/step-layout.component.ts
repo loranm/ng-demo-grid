@@ -19,7 +19,6 @@ import { SharedModule } from '@shared/shared.module';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class StepLayoutComponent {
-  @Input() title!: string;
   @Input() snippets!: readonly Snippet[];
 }
 

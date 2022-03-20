@@ -1,20 +1,25 @@
 .done {
-  display: grid;
-  gap: var(--gap);
-  grid-template-columns: repeat(4, 1fr);
+  &.testimonials {
+    &__list {
+      display: grid;
+      gap: var(--gap);
+      grid-template-columns: repeat(4, 1fr);
 
-  > li {
-    &:nth-of-type(1) {
-      grid-column: span 2;
-    }
+      > .testimonials {
+        &__list__item {
+          &#testimonial_1 {
+            grid-column: span 2;
+          }
+          &#testimonial_4 {
+            grid-column: span 2;
+          }
 
-    &:nth-of-type(4) {
-      grid-column: span 2;
-    }
-
-    &:nth-of-type(5) {
-      grid-column: 4;
-      grid-row: 1 / span 2;
+          &#testimonial_5 {
+            grid-column: 4;
+            grid-row: 1 / span 2;
+          }
+        }
+      }
     }
   }
 }

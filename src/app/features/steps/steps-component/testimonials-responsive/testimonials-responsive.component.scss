@@ -1,4 +1,4 @@
-.testimonials {
+.testimonials-responsive {
   display: grid;
   gap: var(--gap);
 
@@ -12,7 +12,7 @@
     gap: var(--gap);
     grid-template-columns: repeat(4, 1fr);
 
-    > .testimonials {
+    > .testimonials-responsive {
       &__list__item {
         &#testimonial_1 {
           grid-column: span 2;

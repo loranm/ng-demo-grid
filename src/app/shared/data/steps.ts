@@ -31,4 +31,8 @@ export const STEPS: readonly Step[] = [
     label: '🦄 Dans la vraie vie 🦄 ',
     path: `/${FeaturesRoutingEnum.Steps}/${StepsRoutingEnum.Testimonials}`,
   },
+  {
+    label: '📱 Version mobile Easy Peasy 📱 ',
+    path: `/${FeaturesRoutingEnum.Steps}/${StepsRoutingEnum.TestimonialsResponsive}`,
+  },
 ] as const;

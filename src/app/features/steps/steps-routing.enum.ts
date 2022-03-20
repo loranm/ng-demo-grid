@@ -6,6 +6,7 @@ export enum StepsRoutingEnum {
   Sandbox = 'sandbox',
   Cardio = 'cardio',
   Testimonials = 'testimonials',
+  TestimonialsResponsive = 'testimonials-responsive',
   MinMax = 'minmax',
   AlignCenter = 'aligner-centrer',
 }

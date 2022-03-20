@@ -1,6 +1,6 @@
-<section class="testimonials">
+<section class="testimonials-responsive">
   <app-done-toggle
-    class="testimonials__toggle"
+    class="testimonials-responsive__toggle"
     (toggleChange)="toggleChange()"
     id="toggle-label"
     [isChecked]="(isDone$ | async) || false"
@@ -9,9 +9,13 @@
   </app-done-toggle>
 
   <app-step-layout [snippets]="snippets">
-    <ul role="list" class="testimonials__list" [class.done]="isDone$ | async">
+    <ul
+      role="list"
+      class="testimonials-responsive__list"
+      [class.done]="isDone$ | async"
+    >
       <li
-        class="testimonials__list__item"
+        class="testimonials-responsive__list__item"
         *ngFor="let testimonial of TESTIMONIALS; let i = index"
         [id]="'testimonial_' + (i + 1)"
       >

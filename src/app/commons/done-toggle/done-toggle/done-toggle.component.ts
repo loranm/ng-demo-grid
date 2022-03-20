@@ -17,6 +17,7 @@ import { SharedModule } from '@shared/shared.module';
 export class DoneToggleComponent {
   @Output() toggleChange = new EventEmitter<void>();
   @Input() id = 'id';
+  @Input() isChecked!: boolean;
 
   onToggleChange() {
     this.toggleChange.emit();

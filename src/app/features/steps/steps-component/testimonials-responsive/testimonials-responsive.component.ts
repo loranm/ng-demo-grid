@@ -1,18 +1,16 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { CARDBACKGROUNDCOLORS } from '@shared/data/colors';
 import { TESTIMONIALS } from '@shared/data/testimonials';
 import { BehaviorSubject } from 'rxjs';
-import { SNIPPETS } from '@features/steps/steps-component/testimonials/snippets';
+import { SNIPPETS } from '@features/steps/steps-component/testimonials-responsive/snippets';
 
 @Component({
-  templateUrl: './testimonials.component.html',
-  styleUrls: [
-    './testimonials.component.scss',
-    './testimonials-done.component.scss',
-  ],
+  selector: 'app-testimonials-responsive',
+  templateUrl: './testimonials-responsive.component.html',
+  styleUrls: ['./testimonials-responsive.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Testimonials {
+export class TestimonialsResponsiveComponent {
   readonly snippets = SNIPPETS;
   readonly TESTIMONIALS = TESTIMONIALS;
   readonly classArray = CARDBACKGROUNDCOLORS;

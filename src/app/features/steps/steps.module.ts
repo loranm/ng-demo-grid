@@ -16,6 +16,7 @@ import {
   StepPickerComponent,
   StepsComponent,
   Testimonials,
+  TestimonialsResponsiveComponent,
 } from '@features/steps/steps-component';
 import { CardModule } from '@commons/card/card.component';
 import { StepLayoutModule } from '@commons/step-layout/step-layout.component';
@@ -31,6 +32,7 @@ import { StepLayoutModule } from '@commons/step-layout/step-layout.component';
     AlignCenterComponent,
     MinmaxComponent,
     Testimonials,
+    TestimonialsResponsiveComponent,
   ],
   imports: [
     CommonModule,

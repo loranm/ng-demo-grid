@@ -3,6 +3,7 @@
     class="sizing-block__toggle"
     (toggleChange)="toggleChange()"
     id="toggle-label"
+    [isChecked]="(isDone$ | async) || false"
   >
     <h2 id="toggle-label">Voir le résultat</h2>
   </app-done-toggle>
