@@ -1,5 +1,16 @@
 .header {
-  margin-top: 2rem;
+  &__button {
+    position: absolute;
+    top: var(--gap);
+    left: var(--gap);
+  }
+  display: grid;
+  // position: fixed;
+  left: 0;
+  right: 0;
+
+  margin-block-start: 2rem;
+
   &__title {
     font-size: 2rem;
   }

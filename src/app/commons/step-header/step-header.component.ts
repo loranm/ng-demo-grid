@@ -1,5 +1,7 @@
 import { Component, ChangeDetectionStrategy, NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { SeparatorModule } from '@commons/separator/separator.component';
+import { SharedModule } from '@shared/shared.module';
 
 @Component({
   selector: 'app-step-header',
@@ -10,7 +12,7 @@ import { SeparatorModule } from '@commons/separator/separator.component';
 export class StepHeaderComponent {}
 
 @NgModule({
-  imports: [SeparatorModule],
+  imports: [SeparatorModule, SharedModule, RouterModule],
   declarations: [StepHeaderComponent],
   exports: [StepHeaderComponent],
 })

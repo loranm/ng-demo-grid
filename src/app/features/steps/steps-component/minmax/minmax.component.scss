@@ -23,5 +23,8 @@
     display: grid;
     gap: var(--gap);
     grid-template-columns: repeat(3, 1fr);
+    &__item {
+      margin: 0;
+    }
   }
 }

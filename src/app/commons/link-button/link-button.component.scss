@@ -2,18 +2,20 @@
   display: grid;
   place-content: center;
   background-color: var(--clr-primary-400);
-  font-size: 2.1875rem;
+  font-size: var(--fs-700);
   color: var(--clr-neutral-300);
-  height: 100%;
   transition: all 0.3s;
-  border: 5px solid rgba(0, 0, 0, 0.158);
+  border: var(--border);
   border-radius: var(--border-radius);
   box-sizing: border-box;
+  opacity: 0.9;
+  height: 100%;
 
   &:hover {
     cursor: pointer;
-    box-shadow: 0 0.625rem 1.25rem var(--clr-secondary-500);
+    box-shadow: var(--box-shadow);
     color: var(--clr-neutral-100);
-    font-weight: bold;
+    transform: scale(1.02);
+    opacity: 1;
   }
 }
