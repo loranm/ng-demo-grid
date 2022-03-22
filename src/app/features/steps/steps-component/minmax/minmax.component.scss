@@ -22,7 +22,9 @@
     padding: var(--padding);
     display: grid;
     gap: var(--gap);
-    grid-template-columns: repeat(3, 1fr);
+    // 👉 hmm tu sens le bug arrivé si le contenu est plus grand que 150px ?
+    grid-template-columns: repeat(auto-fill, 150px);
+
     &__item {
       margin: 0;
     }

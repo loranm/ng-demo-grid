@@ -2,10 +2,12 @@
   --clr-primary-400: hsl(263 55% 52%);
   --clr-primary-500: hsl(263 55% 46%);
   --clr-secondary-400: hsl(217 19% 35%);
-  --clr-secondary-500: hsl(219 29% 14%);
+  --clr-secondary-500: hsl(217, 30%, 14%);
+  --clr-secondary-500-25: hsla(217, 30%, 14%, 0.25);
   --clr-neutral-100: hsl(0 0% 100%);
   --clr-neutral-200: hsl(210 46% 95%);
   --clr-neutral-300: hsl(0 0% 81%);
+
   --clr-contrast: hsl(47, 100%, 50%);
 
   --ff-primary: "Barlow Semi Condensed", sans-serif;

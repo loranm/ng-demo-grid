@@ -3,6 +3,7 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { filter, map, switchMap } from 'rxjs/operators';
 import { STEPS } from '@shared/data/steps';
+import { FeaturesRoutingEnum } from '@features/features-routing.enum';
 
 @Component({
   templateUrl: './steps.component.html',
@@ -13,6 +14,7 @@ export class StepsComponent implements OnDestroy {
   steps = STEPS;
   title!: string;
   sub: Subscription;
+  FeaturesRoutingEnum = FeaturesRoutingEnum;
 
   constructor(
     private readonly router: Router,

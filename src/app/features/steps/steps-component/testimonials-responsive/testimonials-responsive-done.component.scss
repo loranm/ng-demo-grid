@@ -1,0 +1,38 @@
+@use "breakpoints" as breakpoints;
+
+.testimonials-responsive {
+  display: grid;
+  gap: var(--gap);
+
+  &__toggle {
+    display: grid;
+    justify-content: center;
+  }
+
+  &__list {
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  @media (min-width: 50rem) {
+    &__list {
+      grid-template-columns: repeat(4, 1fr);
+      > .testimonials-responsive {
+        &__list__item {
+          &#testimonial_1 {
+            grid-column: span 2;
+          }
+          &#testimonial_4 {
+            grid-column: span 2;
+          }
+
+          &#testimonial_5 {
+            grid-column: 4;
+            grid-row: 1 / span 2;
+          }
+        }
+      }
+    }
+  }
+}

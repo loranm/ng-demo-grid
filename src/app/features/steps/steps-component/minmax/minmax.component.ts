@@ -8,12 +8,8 @@ import { BehaviorSubject } from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MinmaxComponent {
-  blocks: number[];
+  blocks = ['Hello', 'Ola!', 'Bonjour !', 'Hallo!'];
   isDone$ = new BehaviorSubject(false);
-
-  constructor(private readonly block: BlockGeneratorService) {
-    this.blocks = this.block.generate(30);
-  }
 
   toggleChange(): void {
     this.isDone$.next(!this.isDone$.value);

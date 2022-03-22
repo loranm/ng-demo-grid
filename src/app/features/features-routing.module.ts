@@ -9,6 +9,10 @@ const routes: Routes = [
       (await import('./steps/steps.module')).StepsModule,
   },
   {
+    path: FeaturesRoutingEnum.Refs,
+    loadChildren: async () => (await import('./refs/refs.module')).RefsModule,
+  },
+  {
     path: '',
     redirectTo: FeaturesRoutingEnum.Steps,
     pathMatch: 'full',

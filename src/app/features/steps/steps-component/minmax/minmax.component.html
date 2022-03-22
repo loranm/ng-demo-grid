@@ -8,12 +8,9 @@
   </app-done-toggle>
 
   <ul class="minmax__container" [class.done]="isDone$ | async">
-    <li
-      *ngFor="let block of blocks; let i = index"
-      [attr.id]="'item' + (i + 1)"
-    >
+    <li *ngFor="let block of blocks">
       <app-block>
-        <p class="minmax__container__item">item {{ i + 1 }}</p>
+        <p class="minmax__container__item">{{ block }}</p>
       </app-block>
     </li>
   </ul>

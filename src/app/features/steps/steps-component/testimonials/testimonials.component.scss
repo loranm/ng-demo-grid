@@ -1,6 +1,7 @@
 .testimonials {
   display: grid;
   gap: var(--gap);
+  grid-template-columns: minmax(0, 1fr);
 
   &__toggle {
     display: grid;

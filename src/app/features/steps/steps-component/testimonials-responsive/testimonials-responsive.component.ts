@@ -7,7 +7,10 @@ import { SNIPPETS } from '@features/steps/steps-component/testimonials-responsiv
 @Component({
   selector: 'app-testimonials-responsive',
   templateUrl: './testimonials-responsive.component.html',
-  styleUrls: ['./testimonials-responsive.component.scss'],
+  styleUrls: [
+    './testimonials-responsive.component.scss',
+    './testimonials-responsive-done.component.scss',
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TestimonialsResponsiveComponent {

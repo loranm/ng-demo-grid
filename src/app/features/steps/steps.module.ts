@@ -20,6 +20,7 @@ import {
 } from '@features/steps/steps-component';
 import { CardModule } from '@commons/card/card.component';
 import { CodeModule } from '@commons/code/code.component';
+import { SharedModule } from '@shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { CodeModule } from '@commons/code/code.component';
   ],
   imports: [
     CommonModule,
+    SharedModule,
     StepsRoutingModule,
     LinkButtonModule,
     DoneToggleModule,

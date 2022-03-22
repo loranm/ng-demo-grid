@@ -1,20 +1,35 @@
 .steps {
   display: grid;
   gap: var(--gap);
-  width: var(--max-width);
-  margin: auto;
+  grid-template-columns: minmax(0, 1fr);
+  padding-inline: var(--padding);
 
   &__title {
     font-size: 2rem;
+    color: var(--clr-contrast);
+    position: relative;
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: -1rem;
+      transition-delay: 1s;
+      transform: translateX(25%);
+      content: "";
+      width: 100%;
+      border: 2px solid;
+      animation: slide;
+    }
   }
 
-  &__board {
-    display: grid;
-    gap: var(--gap);
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 7rem;
-    justify-content: center;
-    align-content: center;
-    padding: var(--padding);
+  @keyframes slide {
+    from {
+      transform-origin: right;
+      transform: translateX(0) scaleX(0.1);
+      transition-timing-function: ease-out;
+    }
+    to {
+      transform: translateX(25%) scaleX(1);
+      // border: 10px solid red;
+    }
   }
 }

@@ -8,6 +8,11 @@
   </app-done-toggle>
 
   <ul class="align-center__container" [class.done]="isDone$ | async">
-    <li *ngFor="let block of blocks; let i = index">{{ i + 1 }}</li>
+    <li
+      *ngFor="let block of blocks; let i = index"
+      class="align-center__container__item"
+    >
+      {{ i + 1 }}
+    </li>
   </ul>
 </section>

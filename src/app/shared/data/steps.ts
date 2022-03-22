@@ -16,16 +16,20 @@ export const STEPS: readonly Step[] = [
     path: `/${FeaturesRoutingEnum.Steps}/${StepsRoutingEnum.Move}`,
   },
   {
-    label: '💛 Cardio 💛',
-    path: `/${FeaturesRoutingEnum.Steps}/${StepsRoutingEnum.Cardio}`,
-  },
-  {
     label: 'Aligner et centrer',
     path: `/${FeaturesRoutingEnum.Steps}/${StepsRoutingEnum.AlignCenter}`,
   },
   {
+    label: '💛 Cardio 💛',
+    path: `/${FeaturesRoutingEnum.Steps}/${StepsRoutingEnum.Cardio}`,
+  },
+  {
     label: '🤔 minmax Auto-fill Auto-fit 🤔',
     path: `/${FeaturesRoutingEnum.Steps}/${StepsRoutingEnum.MinMax}`,
+  },
+  {
+    label: "🦄 Galerie d'images 🦄 A faire ",
+    path: `/${FeaturesRoutingEnum.Steps}/${StepsRoutingEnum.Testimonials}`,
   },
   {
     label: '🦄 Dans la vraie vie 🦄 ',

@@ -1,6 +1,7 @@
 .testimonials-responsive {
   display: grid;
   gap: var(--gap);
+  grid-template-columns: minmax(0, 1fr);
 
   &__toggle {
     display: grid;
@@ -10,22 +11,6 @@
   &__list {
     display: grid;
     gap: var(--gap);
-    grid-template-columns: repeat(4, 1fr);
-
-    > .testimonials-responsive {
-      &__list__item {
-        &#testimonial_1 {
-          grid-column: span 2;
-        }
-        &#testimonial_4 {
-          grid-column: span 2;
-        }
-
-        &#testimonial_5 {
-          grid-column: 4;
-          grid-row: 1 / span 2;
-        }
-      }
-    }
+    grid-template-columns: minmax(0, 1fr);
   }
 }
