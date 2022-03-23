@@ -1,0 +1,16 @@
+<main>
+  <section class="home">
+    <app-step-header class="home__header">
+      <h1 class="home__title">{{ title }}</h1>
+    </app-step-header>
+    <article class="home__content">
+      <a [routerLink]="['/steps']">
+        <img
+          class="home__content__illustration"
+          [src]="waffleSrc"
+          alt="jolie gauffre"
+        />
+      </a>
+    </article>
+  </section>
+</main>

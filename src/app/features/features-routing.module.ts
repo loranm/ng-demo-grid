@@ -4,6 +4,10 @@ import { FeaturesRoutingEnum } from '@features/features-routing.enum';
 
 const routes: Routes = [
   {
+    path: FeaturesRoutingEnum.Home,
+    loadChildren: async () => (await import('./home/home.module')).HomeModule,
+  },
+  {
     path: FeaturesRoutingEnum.Steps,
     loadChildren: async () =>
       (await import('./steps/steps.module')).StepsModule,
@@ -14,7 +18,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: FeaturesRoutingEnum.Steps,
+    redirectTo: FeaturesRoutingEnum.Home,
     pathMatch: 'full',
   },
 ];

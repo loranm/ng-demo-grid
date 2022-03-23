@@ -1,1 +1,24 @@
-<p>refs works!</p>
+<main>
+  <section class="refs">
+    <app-step-header class="refs__header">
+      <h1 class="refs__title">{{ title }}</h1>
+    </app-step-header>
+    <article class="refs__content">
+      <ul class="refs__content__list">
+        <li class="refs__content__list__item" *ngFor="let ref of refs">
+          <h2 class="refs__content__list__item__label">{{ ref.label }}</h2>
+          <a
+            class="refs__content__list__item__link"
+            [attr.aria-label]="ref.label"
+            [href]="ref.url"
+            target="__blank"
+            >{{ ref.url }}</a
+          >
+          <q class="refs__content__list__item__description">
+            {{ ref.description }}
+          </q>
+        </li>
+      </ul>
+    </article>
+  </section>
+</main>

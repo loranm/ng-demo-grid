@@ -1,9 +1,6 @@
-.steps {
+.home {
   display: grid;
   gap: var(--gap);
-  grid-template-columns: minmax(0, 1fr);
-  padding-inline: var(--padding);
-
   &__title {
     font-size: 2rem;
     color: var(--clr-contrast);
@@ -21,6 +18,18 @@
     }
   }
 
+  &__content {
+    padding: 10rem;
+    display: grid;
+    place-items: center;
+    &__illustration {
+      transition: filter 2s;
+      &:hover {
+        filter: drop-shadow(2.5rem 0.75rem 2rem var(--clr-primary-500));
+      }
+    }
+  }
+
   @keyframes slide {
     from {
       transform-origin: right;
@@ -29,22 +38,7 @@
     }
     to {
       transform: translateX(25%) scaleX(1);
-    }
-  }
-
-  &__footer {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: var(--clr-secondary-500-25);
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    align-items: center;
-    padding: var(--padding);
-    &__link {
-      justify-self: end;
-      color: var(--clr-neutral-100);
+      // border: 10px solid red;
     }
   }
 }
