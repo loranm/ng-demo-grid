@@ -71,6 +71,13 @@ const routes: Routes = [
         },
       },
       {
+        path: StepsRoutingEnum.TemplateAreas,
+        component: components.TemplateAreasComponent,
+        resolve: {
+          title: HeaderTitleResolver,
+        },
+      },
+      {
         path: '',
         redirectTo: StepsRoutingEnum.Selector,
         pathMatch: 'full',

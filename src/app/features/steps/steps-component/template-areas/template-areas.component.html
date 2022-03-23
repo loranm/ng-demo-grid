@@ -1,0 +1,29 @@
+<section class="template-areas-demo">
+  <app-done-toggle
+    class="template-areas-demo__toggle"
+    (toggleChange)="toggleChange()"
+    id="toggle-label"
+    [isChecked]="(isDone$ | async) || false"
+  >
+    <h2 id="toggle-label">Voir le résultat</h2>
+  </app-done-toggle>
+
+  <ul
+    role="list"
+    class="template-areas-demo__list"
+    [class.done]="isDone$ | async"
+  >
+    <li
+      class="template-areas-demo__list__item"
+      *ngFor="let testimonial of TESTIMONIALS; let i = index"
+      [id]="'testimonial_' + (i + 1)"
+    >
+      <app-card
+        [testimonial]="testimonial"
+        [className]="classArray[i]"
+      ></app-card>
+    </li>
+  </ul>
+
+  <!-- <app-code [snippets]="snippets"></app-code> -->
+</section>

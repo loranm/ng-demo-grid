@@ -39,4 +39,8 @@ export const STEPS: readonly Step[] = [
     label: '📱 Version mobile Easy Peasy 📱 ',
     path: `/${FeaturesRoutingEnum.Steps}/${StepsRoutingEnum.TestimonialsResponsive}`,
   },
+  {
+    label: '🏛 ...avec des mots pour le dire... ✌️',
+    path: `/${FeaturesRoutingEnum.Steps}/${StepsRoutingEnum.TemplateAreas}`,
+  },
 ] as const;

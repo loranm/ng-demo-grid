@@ -9,4 +9,5 @@ export enum StepsRoutingEnum {
   TestimonialsResponsive = 'testimonials-responsive',
   MinMax = 'minmax',
   AlignCenter = 'aligner-centrer',
+  TemplateAreas = 'areas',
 }

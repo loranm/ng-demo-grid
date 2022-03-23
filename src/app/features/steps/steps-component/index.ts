@@ -8,3 +8,4 @@ export * from '@features/steps/steps-component/sizing-blocks';
 export * from '@features/steps/steps-component/cardio';
 export * from '@features/steps/steps-component/testimonials';
 export * from '@features/steps/steps-component/testimonials-responsive';
+export * from '@features/steps/steps-component/template-areas';

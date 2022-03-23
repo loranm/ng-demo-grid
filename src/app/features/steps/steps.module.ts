@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { BlockModule } from '@commons/block/block.component';
 import { DoneToggleModule } from '@commons/done-toggle/done-toggle/done-toggle.component';
 import { LinkButtonModule } from '@commons/link-button/link-button.component';
-import { SeparatorModule } from '@commons/separator/separator.component';
 import { StepHeaderModule } from '@commons/step-header/step-header.component';
 import { StepsRoutingModule } from '@features/steps/steps-routing.module';
 import {
@@ -17,6 +16,7 @@ import {
   StepsComponent,
   Testimonials,
   TestimonialsResponsiveComponent,
+  TemplateAreasComponent,
 } from '@features/steps/steps-component';
 import { CardModule } from '@commons/card/card.component';
 import { CodeModule } from '@commons/code/code.component';
@@ -34,6 +34,7 @@ import { SharedModule } from '@shared/shared.module';
     MinmaxComponent,
     Testimonials,
     TestimonialsResponsiveComponent,
+    TemplateAreasComponent,
   ],
   imports: [
     CommonModule,
