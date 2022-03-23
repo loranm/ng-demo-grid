@@ -27,10 +27,10 @@ export const STEPS: readonly Step[] = [
     label: '🤔 minmax Auto-fill Auto-fit 🤔',
     path: `/${FeaturesRoutingEnum.Steps}/${StepsRoutingEnum.MinMax}`,
   },
-  {
-    label: "🦄 Galerie d'images 🦄 A faire ",
-    path: `/${FeaturesRoutingEnum.Steps}/${StepsRoutingEnum.Testimonials}`,
-  },
+  // {
+  //   label: "🦄 Galerie d'images 🦄 A faire ",
+  //   path: `/${FeaturesRoutingEnum.Steps}/${StepsRoutingEnum.Testimonials}`,
+  // },
   {
     label: '🦄 Dans la vraie vie 🦄 ',
     path: `/${FeaturesRoutingEnum.Steps}/${StepsRoutingEnum.Testimonials}`,

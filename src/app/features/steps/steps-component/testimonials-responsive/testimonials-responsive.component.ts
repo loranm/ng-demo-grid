@@ -18,7 +18,7 @@ export class TestimonialsResponsiveComponent {
   readonly TESTIMONIALS = TESTIMONIALS;
   readonly classArray = CARDBACKGROUNDCOLORS;
 
-  isDone$ = new BehaviorSubject<boolean>(true);
+  isDone$ = new BehaviorSubject<boolean>(false);
 
   toggleChange(): void {
     this.isDone$.next(!this.isDone$.value);

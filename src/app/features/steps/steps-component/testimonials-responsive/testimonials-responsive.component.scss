@@ -2,6 +2,7 @@
   display: grid;
   gap: var(--gap);
   grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
 
   &__toggle {
     display: grid;
@@ -9,8 +10,10 @@
   }
 
   &__list {
+    outline: 2px solid red;
     display: grid;
     gap: var(--gap);
     grid-template-columns: minmax(0, 1fr);
+    width: var(--max-width);
   }
 }
