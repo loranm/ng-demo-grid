@@ -41,9 +41,10 @@
         }
         &__link {
           font-size: var(--fs-500);
+          transition: transform 0.4s, color 0.4s ease-in-out;
           &:hover {
             color: var(--clr-contrast);
-            transform: scale(1.02);
+            transform: scale(1.02) translateX(5%);
           }
         }
         &__description {

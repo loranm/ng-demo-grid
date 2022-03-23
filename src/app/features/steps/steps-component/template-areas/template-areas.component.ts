@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CARDBACKGROUNDCOLORS } from '@shared/data/colors';
 import { TESTIMONIALS } from '@shared/data/testimonials';
 import { BehaviorSubject } from 'rxjs';
-import { SNIPPETS } from '../testimonials/snippets';
+import { SNIPPETS } from './snippets';
 
 @Component({
   selector: 'app-template-areas',

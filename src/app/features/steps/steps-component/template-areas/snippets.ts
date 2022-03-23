@@ -29,30 +29,34 @@ export const SNIPPETS: readonly Snippet[] = [
   </section>`,
   },
   {
-    label: 'Testimonials CSS',
+    label: 'Testimonial CSS',
     code: `
-    &.testimonials {
+    &.template-areas-demo {
       &__list {
-        display: grid;
-        gap: var(--gap);
         grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+          "testimonial1 testimonial1 testimonial2 testimonial5"
+          "testimonial3  testimonial4 testimonial4  testimonial5";
 
-        > .testimonials {
-          &__list__item {
-            &#testimonial_1 {
-              grid-column: span 2;
-            }
-            &#testimonial_4 {
-              grid-column: span 2;
-            }
-
-            &#testimonial_5 {
-              grid-column: 4;
-              grid-row: 1 / span 2;
-            }
+        > .template-areas-demo__list__item {
+          &#testimonial_1 {
+            grid-area: testimonial1;
+          }
+          &#testimonial_2 {
+            grid-area: testimonial2;
+          }
+          &#testimonial_3 {
+            grid-area: testimonial3;
+          }
+          &#testimonial_4 {
+            grid-area: testimonial4;
+          }
+          &#testimonial_5 {
+            grid-area: testimonial5;
           }
         }
       }
-    }`,
+    }
+    `,
   },
 ] as const;
