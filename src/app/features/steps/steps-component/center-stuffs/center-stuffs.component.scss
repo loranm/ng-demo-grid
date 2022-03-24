@@ -10,7 +10,7 @@
   }
 
   &__container {
-    border: 1rem solid var(--clr-contrast);
+    border: var(--border-contrast);
     border-radius: var(--border-radius);
     height: 50vh;
     &__bee {

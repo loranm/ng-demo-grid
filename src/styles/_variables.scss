@@ -24,7 +24,8 @@
   --padding: 1rem;
   --border-radius: 0.5rem;
   --box-shadow: 2.5rem 3.75rem 3rem -3rem var(--clr-secondary-400);
-  --border: 5px solid var(--clr-primary-500);
+  --border: 0.5rem solid var(--clr-primary-500);
+  --border-contrast: 1rem solid var(--clr-contrast);
 
   --max-width: min(95%, 70rem);
   --gap: 2rem;
