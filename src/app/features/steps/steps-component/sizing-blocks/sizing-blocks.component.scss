@@ -11,7 +11,7 @@
 
   &__container {
     border: 1rem solid var(--clr-contrast);
-    border-radius: 1rem;
-    padding: 1rem;
+    border-radius: var(--border-radius);
+    padding: var(--padding);
   }
 }

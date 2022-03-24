@@ -11,7 +11,7 @@
 
   &__container {
     border: 1rem solid var(--clr-contrast);
-    border-radius: 1rem;
+    border-radius: var(--border-radius);
     height: 50vh;
     &__bee {
       width: 12.5rem;

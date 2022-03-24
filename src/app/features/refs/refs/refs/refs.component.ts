@@ -35,6 +35,13 @@ export class RefsComponent {
       author: 'Kevin Powell',
     },
     {
+      label: 'Defensive CSS',
+      url: 'https://ishadeed.com/article/defensive-css/#minimum-content-size-in-css-grid',
+      description:
+        "Plein de bonnes pratiques pour que votre CSS n'agisse plus étrangement",
+      author: 'Ahmad Shadeed',
+    },
+    {
       label: 'Gauffres Liégeoises',
       url: 'https://www.marmiton.org/recettes/recette_gaufres-liegeoises_11171.aspx',
       description: 'Gaufres liégeoises - 23 min - très facile',
